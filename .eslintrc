@@ -1,3 +1,31 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": ["next"],
+  "plugins": ["prettier"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/forbid-prop-types": "off",
+    "arrow-parens": "off",
+    "no-prototype-builtins": "off",
+    "space-before-blocks": "off",
+    "anchor-is-valid": "off",
+    "camelcase": "off",
+    "consistent-return": "off",
+    "array-callback-return": "off",
+    "prettier/prettier": "warn",
+    "eslint-disable-next-line": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "react/no-array-index-key": "off",
+    "react/jsx-no-bind": "off",
+    "no-unused-expressions": "off",
+    "no-console": "warn",
+    "no-unused-vars": "warn",
+    "react-hooks/exhaustive-deps": "off"
+  }
+  
 }
