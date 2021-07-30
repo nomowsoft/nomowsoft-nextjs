@@ -9,27 +9,15 @@ export const HeaderBox = styled(motion.header)`
   top: 0;
   transition: padding 0.3s cubic-bezier(0, 0.22, 0.69, 0.99),
     background 0.3s cubic-bezier(0, 0.22, 0.69, 0.99);
-  padding: ${({ scrolled }) => (scrolled ? "5px 10px" : "10px")};
   background-color: ${({ scrolled }) => (scrolled ? "#fff" : "transparent")};
   box-shadow: ${({ theme, scrolled }) =>
     scrolled ? `0 2px 5px 0 ${theme.colors.gray_100}` : "unset"};
-
-  @media ${devices.sm} {
-    padding: ${({ scrolled }) => (scrolled ? "11px 20px" : "15px 20px")};
-  }
-  @media ${devices.md} {
-    padding: ${({ scrolled }) => (scrolled ? "12px 20px" : "15px 20px")};
-  }
-  @media ${devices.lg} {
-    padding: ${({ scrolled }) => (scrolled ? "12px 20px" : "17px 20px")};
-  }
+  z-index: 20;
   @media ${devices.xl} {
-    padding: ${({ scrolled }) => (scrolled ? "20px 25px" : "27px 25px")};
     box-shadow: ${({ theme, scrolled }) =>
       scrolled ? `0 2px 15px 0 ${theme.colors.gray_100}` : "unset"};
   }
-  @media ${devices.xxl} {
-    padding: ${({ scrolled }) => (scrolled ? "20px 28px" : "30px 28px")};
+  @media ${devices.xxxl} {
     box-shadow: ${({ theme, scrolled }) =>
       scrolled ? `0 2px 15px 0 ${theme.colors.gray_100}` : "unset"};
   }
@@ -46,6 +34,22 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   max-width: 1460px;
   margin: auto;
+  padding: ${({ scrolled }) => (scrolled ? "5px 10px" : "10px")};
+  @media ${devices.sm} {
+    padding: ${({ scrolled }) => (scrolled ? "11px 20px" : "15px 20px")};
+  }
+  @media ${devices.md} {
+    padding: ${({ scrolled }) => (scrolled ? "12px 20px" : "15px 20px")};
+  }
+  @media ${devices.lg} {
+    padding: ${({ scrolled }) => (scrolled ? "12px 20px" : "17px 20px")};
+  }
+  @media ${devices.xl} {
+    padding: ${({ scrolled }) => (scrolled ? "20px 25px" : "27px 25px")};
+  }
+  @media ${devices.xxxl} {
+    padding: ${({ scrolled }) => (scrolled ? "20px 0" : "30px 0")};
+  }
 `;
 
 export const HeaderBtn = styled(Button)`
@@ -71,7 +75,7 @@ export const HeaderBtn = styled(Button)`
     font-size: 14px;
     margin-inline-start: 110px;
   }
-  @media ${devices.xxl} {
+  @media ${devices.xxxl} {
     padding: 13px 32px;
     font-size: 20px;
     margin-inline-start: 210px;
@@ -122,7 +126,7 @@ export const HeaderLink = styled.span`
       height: 5px;
     }
   }
-  @media ${devices.xxl} {
+  @media ${devices.xxxl} {
     font-size: 20px;
     margin: 0 30px;
 

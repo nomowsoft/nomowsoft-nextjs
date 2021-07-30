@@ -52,7 +52,7 @@ export const IconBox = styled(IconButton)`
       width: 17px;
     }
   }
-  @media ${devices.xxl} {
+  @media ${devices.xxxl} {
     height: 40px;
     width: 40px;
     font-size: 18px;

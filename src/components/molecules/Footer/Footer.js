@@ -21,8 +21,7 @@ const Footer = () => {
         <FooterBox>
           <Section>
             <h4>
-              nomow
-              <span>soft</span>
+              nomow <span>soft</span>
             </h4>
             <li>who are we</li>
             <li>about us</li>
@@ -49,7 +48,7 @@ const Footer = () => {
               </div>
             </li>
             <li>
-              <div style={{ display: "flex", alignItems: 'center' }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <Icon size={25} icon={mail} />
                 <span className="email">monowsoft2021@gmail.com</span>
               </div>

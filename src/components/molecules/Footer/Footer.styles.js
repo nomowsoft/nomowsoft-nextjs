@@ -6,8 +6,6 @@ export const FooterContainer = styled(motion.footer)`
   width: 100%;
   padding: 10px;
   background-color: #fff;
-  max-width: 1460px;
-  margin: auto;
 
   @media ${devices.sm} {
     padding: 20px;
@@ -18,7 +16,7 @@ export const FooterContainer = styled(motion.footer)`
   @media ${devices.xl} {
     padding: 37px 25px;
   }
-  @media ${devices.xxl} {
+  @media ${devices.xxxl} {
     padding: 50px 28px;
   }
 `;
@@ -26,6 +24,8 @@ export const FooterContainer = styled(motion.footer)`
 export const FooterBox = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  max-width: 1460px;
+  margin: auto;
   @media ${devices.lg} {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
@@ -86,15 +86,17 @@ export const Section = styled(motion.div)`
     }
     & li {
       font-size: 16px;
+      margin: 15px 0;
     }
   }
-  @media ${devices.xxl} {
+  @media ${devices.xxxl} {
     & h4 {
       font-size: 20px;
     }
     & li {
       font-size: 19px;
-      & svg {
+      margin: 23px 0;
+      & i {
         margin-inline-end: 24px;
       }
     }
@@ -122,7 +124,7 @@ export const PrivacySection = styled(motion.div)`
       font-size: 18px;
     }
   }
-  @media ${devices.xxl} {
+  @media ${devices.xxxl} {
     & span {
       font-size: 20px;
     }

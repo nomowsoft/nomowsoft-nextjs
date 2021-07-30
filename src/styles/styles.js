@@ -6,7 +6,8 @@ const breakpoints = {
   md: 413, // iphone 7 plus
   lg: 767, // ipad
   xl: 1023, // ipad pro
-  xxl: 1399, // other
+  xxl: 1300, // laptop
+  xxxl: 1699, // other
 };
 const devices = {
   xs: `(min-width: ${breakpoints.xs}px)`,
@@ -15,6 +16,7 @@ const devices = {
   lg: `(min-width: ${breakpoints.lg}px)`,
   xl: `(min-width: ${breakpoints.xl}px)`,
   xxl: `(min-width: ${breakpoints.xxl}px)`,
+  xxxl: `(min-width: ${breakpoints.xxxl}px)`,
 };
 
 const light = {
