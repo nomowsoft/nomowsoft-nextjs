@@ -28,7 +28,7 @@ const StyledButton = styled.button`
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 7px;
   cursor: pointer;
   text-transform: capitalize;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
@@ -53,17 +53,17 @@ const StyledButton = styled.button`
   ${({ btnStyle }) =>
     btnStyle === "success" &&
     css`
-      background-color: #28a745;
-      border-color: #28a745;
+      background-color: #217371;
+      border-color: #217371;
       color: #fff;
 
       &:hover {
         color: #fff;
-        background-color: #218838;
-        border-color: #1e7e34;
+        background-color: #2c7a78;
+        border-color: #2c7a78;
       }
       &:focus {
-        box-shadow: 0 0 0 2px rgb(40 167 69 / 50%);
+        box-shadow: 0 0 0 2px #2c7a7840;
       }
     `}
 

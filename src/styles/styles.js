@@ -2,37 +2,44 @@ import { createGlobalStyle } from "styled-components";
 
 const breakpoints = {
   xs: 280, // z-filp
-  sm: 377, // iphone x
-  md: 415, // iphone 7 plus
-  lg: 770, // ipad
-  xl: 1025, // ipad pro
-  xxl: 1400, // other
+  sm: 374, // iphone x
+  md: 413, // iphone 7 plus
+  lg: 767, // ipad
+  xl: 1023, // ipad pro
+  xxl: 1399, // other
+};
+const devices = {
+  xs: `(min-width: ${breakpoints.xs}px)`,
+  sm: `(min-width: ${breakpoints.sm}px)`,
+  md: `(min-width: ${breakpoints.md}px)`,
+  lg: `(min-width: ${breakpoints.lg}px)`,
+  xl: `(min-width: ${breakpoints.xl}px)`,
+  xxl: `(min-width: ${breakpoints.xxl}px)`,
 };
 
 const light = {
   colors: {
-    text: "#0f1419",
+    primary: "#217371",
+    secondary: "#e66b27",
+    bg: "#fff",
     muted: "#f8f9fb",
-    primary: "#fff",
-    shadow: "#b6b6b6",
-    gray: "#c8c5c5",
-    blue: "#1da1f2",
+    text: "#000",
+
+    gray_100: "#00000014",
+    gray_200: "#373737",
   },
 };
 
 const dark = {
   colors: {
-    text: "#fff",
+    primary: "#217371",
+    secondary: "#e66b27",
+    bg: "#000",
     muted: "#262626",
-    primary: "#000",
-    shadow: "#373535",
-    gray: "#c8c5c5",
-    blue: "#47a1eb",
+    text: "#fff",
+    gray_100: "#373535",
+    gray_200: "#373737",
   },
-};
-
-const mediaQuery = (key) => {
-  return (style) => `@media (max-width: ${breakpoints[key]}px) { ${style} }`;
 };
 
 const GlobalStyle = createGlobalStyle`
@@ -43,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    background: ${({ theme }) => theme?.colors.muted};
+    background: ${({ theme }) => theme?.colors.bg};
     color: ${({ theme }) => theme?.colors.text};
     font-family: Cairo, Rubik, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     min-height: 100vh;
@@ -104,9 +111,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  li {
+    list-style-type: none;
+  }
+
   [lang=ar] body {
     direction: rtl;
   }
 `;
 
-export { mediaQuery, GlobalStyle, dark, light };
+export { devices, GlobalStyle, dark, light };

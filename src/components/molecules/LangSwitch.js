@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { IconButton } from "components/atoms";
+import { IconBox } from "./ColorModeSwitch";
 
 function LangSwitcher() {
   const router = useRouter();
   return (
-    <IconButton small>
+    <IconBox small>
       <Link
         href={router.asPath}
         passHref
@@ -13,7 +13,7 @@ function LangSwitcher() {
       >
         {router.locale.toUpperCase()}
       </Link>
-    </IconButton>
+    </IconBox>
   );
 }
 

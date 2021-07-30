@@ -5,7 +5,7 @@ const IconButton = styled.div`
   align-items: center;
   justify-content: center;
   padding: 5px;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.muted};
   border-radius: 6px;
   width: 35px;
   height: 35px;
@@ -51,15 +51,6 @@ const IconButton = styled.div`
       width: 35px;
       padding: 8px;
       border-radius: 50%;
-    `}
-
-  ${({ bg }) =>
-    bg &&
-    css`
-      background: ${bg};
-      &:hover {
-        background: ${({ theme }) => theme.colors.muted};
-      }
     `}
 `;
 
