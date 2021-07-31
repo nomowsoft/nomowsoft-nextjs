@@ -4,21 +4,7 @@ import { motion } from "framer-motion";
 
 export const FooterContainer = styled(motion.footer)`
   width: 100%;
-  padding: 10px;
   background-color: #fff;
-
-  @media ${devices.sm} {
-    padding: 20px;
-  }
-  @media ${devices.lg} {
-    padding: 27px 20px;
-  }
-  @media ${devices.xl} {
-    padding: 37px 25px;
-  }
-  @media ${devices.xxxl} {
-    padding: 50px 28px;
-  }
 `;
 
 export const FooterBox = styled(motion.div)`
@@ -26,9 +12,24 @@ export const FooterBox = styled(motion.div)`
   flex-direction: column;
   max-width: 1460px;
   margin: auto;
+  padding: 10px;
+
+  @media ${devices.sm} {
+    padding: 20px;
+  }
   @media ${devices.lg} {
+    padding: 27px 20px;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+  @media ${devices.xl} {
+    padding: 37px 25px;
+  }
+  @media ${devices.xxl} {
+    padding: 28px;
+  }
+  @media ${devices.xxxl} {
+    padding: 50px 28px;
   }
 `;
 

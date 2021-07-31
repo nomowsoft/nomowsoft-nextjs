@@ -8,10 +8,12 @@ export const IntroContainer = styled(motion.div)`
   margin: auto;
   padding: 20px 10px;
   margin-top: 50px;
+  @media ${devices.sm} {
+    padding: 20px;
+  }
   @media ${devices.lg} {
     min-height: calc(50vh - 90px);
     align-items: center;
-    padding: 20px;
   }
   @media ${devices.xl} {
     padding: 25px;
