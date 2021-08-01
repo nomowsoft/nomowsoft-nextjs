@@ -7,7 +7,7 @@ export const IntroContainer = styled(motion.div)`
   max-width: 1460px;
   margin: auto;
   padding: 20px 10px;
-  margin-top: 50px;
+  margin-top: 100px;
   @media ${devices.sm} {
     padding: 20px;
   }
@@ -17,7 +17,7 @@ export const IntroContainer = styled(motion.div)`
   }
   @media ${devices.xl} {
     padding: 25px;
-    margin-top: 65px;
+    margin-top: 120px;
   }
   @media ${devices.xxl} {
     align-items: center;

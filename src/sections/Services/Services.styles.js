@@ -10,20 +10,26 @@ import { Button } from "components/atoms";
 
 export const ServicesContainer = styled.div`
   width: 100%;
-  background: linear-gradient(to bottom, #f2f1f1 -18%, #edecee); ;
+  background: linear-gradient(to bottom, #f2f1f1 -18%, #edecee);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 20px auto 0;
+  @media ${devices.lg} {
+    margin: 40px auto 0;
+  }
+  @media ${devices.xl} {
+    margin: 60px auto 0;
+  }
+  @media ${devices.xxl} {
+    margin: 80px auto 0;
+  }
+  @media ${devices.xxxl} {
+    margin: 100px auto 0;
+  }
 `;
 
 export const ServicesBox = styled(SharedContainer)`
-  margin: 20px 0;
-  @media ${devices.xl} {
-    margin: 40px auto;
-  }
-  @media ${devices.xxl} {
-    margin: 60px auto;
-  }
-  @media ${devices.xxxl} {
-    margin: 80px auto;
-  }
+  margin: auto;
 `;
 
 export const ServicesTitle = styled(SharedTitle)``;
@@ -82,6 +88,7 @@ export const ListBox = styled(Slider)`
       color: #808080;
       font-size: 12px;
       margin: 10px 0;
+      line-height: 20px;
       text-transform: capitalize;
     }
     & .dot {
@@ -96,7 +103,7 @@ export const ListBox = styled(Slider)`
     & .list-item {
       & .item-title {
         font-size: 20px;
-        margin: 10px 0;
+        margin: 25px 0 15px;
       }
       & .item-text {
         font-size: 14px;
@@ -106,11 +113,15 @@ export const ListBox = styled(Slider)`
   @media ${devices.xxxl} {
     & .list-item {
       & .item-title {
-        font-size: 24px;
-        margin: 15px 0;
+        font-size: 26px;
+        margin: 35px 0 15px;
       }
       & .item-text {
-        font-size: 18px;
+        font-size: 20px;
+      }
+      & .dot {
+        width: 30px;
+        height: 30px;
       }
     }
   }
@@ -120,12 +131,13 @@ export const CardBtn = styled(Button)`
   width: 100%;
   font-size: 12px;
   margin-top: 20px;
+  font-weight: 500;
   @media ${devices.xxl} {
     font-size: 15px;
     padding: 12px;
   }
   @media ${devices.xxxl} {
-    margin-top: 25px;
+    margin-top: 34px;
     padding: 15px;
     font-size: 20px;
   }
