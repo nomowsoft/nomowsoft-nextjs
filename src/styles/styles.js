@@ -122,4 +122,4 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export { devices, GlobalStyle, dark, light };
+export { devices, breakpoints, GlobalStyle, dark, light };

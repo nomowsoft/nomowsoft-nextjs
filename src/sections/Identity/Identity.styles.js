@@ -19,24 +19,7 @@ export const SharedContainer = styled(motion.div)`
     padding: 28px 0;
   }
 `;
-
-export const IdentityContainer = styled(SharedContainer)`
-  display: flex;
-  justify-content: space-between;
-  margin: 20px auto;
-  @media ${devices.lg} {
-    align-items: flex-end;
-    justify-content: space-evenly;
-    min-height: calc(50vh - 90px);
-  }
-`;
-export const InfoSection = styled(motion.div)`
-  flex: 1;
-  @media ${devices.lg} {
-    flex: 0.7;
-  }
-`;
-export const IdentityTitle = styled.h4`
+export const SharedTitle = styled.h4`
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -51,10 +34,28 @@ export const IdentityTitle = styled.h4`
     font-size: 35px;
   }
 `;
+
+export const IdentityContainer = styled(SharedContainer)`
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  @media ${devices.lg} {
+    align-items: flex-end;
+    justify-content: space-evenly;
+  }
+`;
+export const InfoSection = styled(motion.div)`
+  flex: 1;
+  @media ${devices.lg} {
+    flex: 0.7;
+  }
+`;
+export const IdentityTitle = styled(SharedTitle)``;
+
 export const IdentityIconBox = styled.div`
   width: 80px;
   height: 80px;
-  box-shadow: 0 8px 52px 0 rgba(151, 151, 151, 0.16);
+  box-shadow: 0 8px 52px 0 rgb(151 151 151 / 56%);
   background-color: #ffffff;
   border-radius: 50%;
   margin-inline-end: 25px;

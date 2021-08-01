@@ -18,7 +18,7 @@ const Header = () => {
   const { scrolled } = useScroll();
 
   return (
-    <HeaderBox scrolled={scrolled} animate>
+    <HeaderBox scrolled={scrolled}>
       <HeaderContainer>
         {/* left */}
         <ElementBox>

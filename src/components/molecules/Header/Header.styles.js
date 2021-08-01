@@ -7,8 +7,7 @@ export const HeaderBox = styled(motion.header)`
   width: 100%;
   position: fixed;
   top: 0;
-  transition: padding 0.3s cubic-bezier(0, 0.22, 0.69, 0.99),
-    background 0.3s cubic-bezier(0, 0.22, 0.69, 0.99);
+  transition: padding 0.1s ease-in, background 0.1s ease-in;
   background-color: ${({ scrolled }) => (scrolled ? "#fff" : "transparent")};
   box-shadow: ${({ theme, scrolled }) =>
     scrolled ? `0 2px 5px 0 ${theme.colors.gray_100}` : "unset"};

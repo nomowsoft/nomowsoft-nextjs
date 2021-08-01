@@ -13,13 +13,14 @@ export const IntroContainer = styled(motion.div)`
   }
   @media ${devices.lg} {
     min-height: calc(50vh - 90px);
-    align-items: center;
+    align-items: flex-end;
   }
   @media ${devices.xl} {
     padding: 25px;
     margin-top: 65px;
   }
   @media ${devices.xxl} {
+    align-items: center;
     padding: 28px;
     margin-top: 80px;
     min-height: calc(100vh - 90px);

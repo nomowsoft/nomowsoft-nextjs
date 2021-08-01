@@ -29,7 +29,7 @@ export const FooterBox = styled(motion.div)`
     padding: 28px;
   }
   @media ${devices.xxxl} {
-    padding: 50px 28px;
+    padding: 50px 0;
   }
 `;
 
@@ -67,7 +67,7 @@ export const Section = styled(motion.div)`
     }
     & .email {
       color: ${({ theme }) => theme.colors.primary};
-      font-size: 16px;
+      font-size: 12px;
       font-weight: normal;
       font-stretch: normal;
     }
@@ -78,6 +78,9 @@ export const Section = styled(motion.div)`
     }
     & li {
       font-size: 14px;
+    }
+    & .email {
+      font-size: 16px;
     }
   }
   @media ${devices.xl} {
