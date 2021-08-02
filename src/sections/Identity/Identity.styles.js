@@ -44,13 +44,13 @@ export const IdentityContainer = styled(SharedContainer)`
     justify-content: space-evenly;
   }
 `;
+export const IdentityTitle = styled(SharedTitle)``;
 export const InfoSection = styled(motion.div)`
   flex: 1;
   @media ${devices.lg} {
     flex: 0.7;
   }
 `;
-export const IdentityTitle = styled(SharedTitle)``;
 
 export const IdentityIconBox = styled.div`
   width: 80px;

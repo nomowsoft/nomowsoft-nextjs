@@ -149,6 +149,7 @@ export const sliderSettings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 1,
+  swipeToSlide: true,
   // fade: true,
   // nextArrow: <SampleNextArrow />,
   // prevArrow: <SamplePrevArrow />,

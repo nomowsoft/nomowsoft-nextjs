@@ -1,5 +1,5 @@
 import PageTemplate from "components/Templates/PageTemplate";
-import { Introduction, Identity, Services } from "sections";
+import { Introduction, Identity, Services, Clients } from "sections";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Introduction />
       <Identity />
       <Services />
+      <Clients />
     </PageTemplate>
   );
 }
