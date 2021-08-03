@@ -34,7 +34,7 @@ export const BoxSlider = styled.div`
   justify-content: center;
   position: relative;
   height: 110px;
-  margin-top: 20px;
+  margin-top: 40px;
   & .box {
     display: flex;
     width: 400%;
@@ -67,7 +67,7 @@ export const BoxSlider = styled.div`
     }
   }
   @media ${devices.xxl} {
+    margin: 60px auto;
     width: 90%;
-    margin: 20px auto;
   }
 `;

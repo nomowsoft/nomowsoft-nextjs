@@ -1,5 +1,5 @@
 import PageTemplate from "components/Templates/PageTemplate";
-import { Introduction, Identity, Services, Clients } from "sections";
+import { Introduction, Identity, Services, Clients, AboutUs } from "sections";
 
 export default function Home(props) {
   console.log(`props`, props)
@@ -9,6 +9,7 @@ export default function Home(props) {
       <Identity />
       <Services />
       <Clients />
+      <AboutUs />
     </PageTemplate>
   );
 }
