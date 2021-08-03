@@ -14,18 +14,29 @@ const About = () => {
         <AboutTitle>About us</AboutTitle>
         {/* <TitleBorder src={iii} /> */}
         <ListItems>
-          <div className="item">
-            <div className="card-img" />
-            {/* <Image
-              src="/assets/icon.svg"
-              width="200px"
-              height="100px"
-              
-              alt="Picture"
-            /> */}
-          </div>
-          <div className="item">item 1</div>
-          <div className="item">item 1</div>
+          {[...Array(3).keys()].map((i) => (
+            <div className="item" key={i}>
+              <div className="img" />
+              <p className="text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry is standard dummy
+                text
+              </p>
+              <div className="user-box">
+                <Image
+                  src="/assets/Banner.png"
+                  height="60px"
+                  width="60px"
+                  alt="imag"
+                  className="user-image"
+                />
+                <div className="user-info">
+                  <h3>Ahmed Zaki</h3>
+                  <p>Back-end Developer</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </ListItems>
       </AboutContainer>
     </AboutBox>

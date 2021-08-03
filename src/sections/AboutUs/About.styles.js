@@ -25,13 +25,13 @@ export const AboutContainer = styled.div`
     margin: 40px auto 0;
   }
   @media ${devices.xl} {
-    margin: 60px auto 0;
+    margin: 50px auto 0;
   }
   @media ${devices.xxl} {
-    margin: 80px auto 0;
+    margin: 60px auto 0;
   }
   @media ${devices.xxxl} {
-    margin: 100px auto 0;
+    margin: 90px auto 0;
   }
 `;
 
@@ -53,41 +53,102 @@ export const BoxSlider = styled.div`
 `;
 
 export const ListItems = styled.div`
-  display: grid;
-  grid-template-columns: 100%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-
   & .item {
+    width: 100%;
     background: #fff;
     border-radius: 12px;
-    min-height: 380px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
-    /* & div:first-child {
-      width: 100px !important;
-      margin: auto !important;
-      display: block !important;
-    } */
-    & .card-img {
-      background: url("/assets/icon.svg");
-      width: 100px;
-      height: 100px;
+    padding: 30px 24px;
+    /* temp */
+    margin: 20px 0;
+    & .img {
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
       margin: auto;
+    }
+    & .text {
+      display: block;
+      margin-top: 40px;
+      line-height: 24px;
+      font-size: 15px;
+      color: #808080;
+    }
+    & .user-box {
+      display: flex;
+      align-items: center;
+      & .user-image {
+        border-radius: 50%;
+      }
+      & .user-info {
+        margin-inline-start: 10px;
+        & h3 {
+          font-size: 17px;
+          margin: 0 auto 3px;
+        }
+        & p {
+          margin: 0;
+          font-size: 13px;
+        }
+      }
     }
   }
   @media ${devices.lg} {
-    margin: 40px auto 0;
-    grid-template-columns: 50% 50%;
+    margin: 30px auto 0;
+    & .item {
+      margin: 0;
+      max-width: 225px;
+      &:nth-child(2) {
+        margin: 0 20px;
+      }
+    }
   }
   @media ${devices.xl} {
-    margin: 60px auto 0;
-    grid-template-columns: 33% 33% 33%;
-    gap: 10px;
+    margin: 40px auto 0;
+    & .item {
+      max-width: 300px;
+      margin: 0;
+      &:nth-child(2) {
+        margin: 0 20px;
+      }
+    }
   }
   @media ${devices.xxl} {
-    margin: 80px auto 0;
+    margin: 50px 0 0;
+    & .item {
+      max-width: 370px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: url("/assets/between.svg");
+        top: calc(50% - 50px);
+        left: auto;
+        background-size: contain;
+        right: -76px;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+      }
+      &:last-child::before {
+        display: none;
+      }
+      &:nth-child(2) {
+        margin: 0 55px;
+      }
+    }
   }
   @media ${devices.xxxl} {
-    margin: 100px auto 0;
+    margin: 70px auto 0;
+    & .item {
+      max-width: 470px;
+    }
   }
 `;

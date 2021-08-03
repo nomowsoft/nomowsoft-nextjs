@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { devices, breakpoints } from "styles/styles";
-import { motion } from "framer-motion";
 import {
   SharedContainer,
   SharedTitle,
@@ -75,6 +74,7 @@ export const ListBox = styled(Slider)`
   @media ${devices.xxl} {
     margin-top: 50px;
     & .list-item {
+      padding-top: 30px;
       margin-inline-end: 15px;
       & .item-title {
         font-size: 20px;

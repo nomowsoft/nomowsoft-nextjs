@@ -10,7 +10,7 @@ export const FooterContainer = styled(motion.footer)`
 export const FooterBox = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  max-width: 1800px;
+  max-width: 1850px;
   margin: auto;
   padding: 10px;
 
@@ -29,7 +29,7 @@ export const FooterBox = styled(motion.div)`
     padding: 28px;
   }
   @media ${devices.xxxl} {
-    padding: 50px 0;
+    padding: 50px 25px;
   }
 `;
 

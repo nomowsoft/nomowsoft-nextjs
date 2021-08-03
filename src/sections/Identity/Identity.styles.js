@@ -3,7 +3,7 @@ import { devices } from "styles/styles";
 import { motion } from "framer-motion";
 
 export const SharedContainer = styled(motion.div)`
-  max-width: 1800px;
+  max-width: 1850px;
   margin: auto;
   padding: 20px 10px;
   @media ${devices.sm} {
@@ -16,7 +16,7 @@ export const SharedContainer = styled(motion.div)`
     padding: 28px;
   }
   @media ${devices.xxxl} {
-    padding: 28px 0;
+    padding: 28px 25px;
   }
 `;
 export const SharedTitle = styled.h4`

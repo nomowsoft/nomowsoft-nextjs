@@ -31,7 +31,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1800px;
+  max-width: 1900px;
   margin: auto;
   padding: ${({ scrolled }) => (scrolled ? "5px 10px" : "10px")};
   @media ${devices.sm} {
@@ -47,7 +47,7 @@ export const HeaderContainer = styled.div`
     padding: ${({ scrolled }) => (scrolled ? "20px 25px" : "27px 25px")};
   }
   @media ${devices.xxxl} {
-    padding: ${({ scrolled }) => (scrolled ? "20px 0" : "30px 0")};
+    padding: ${({ scrolled }) => (scrolled ? "20px 25px" : "30px 25px")};
   }
 `;
 
