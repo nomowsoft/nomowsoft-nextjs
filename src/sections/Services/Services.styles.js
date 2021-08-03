@@ -100,7 +100,9 @@ export const ListBox = styled(Slider)`
     }
   }
   @media ${devices.xxl} {
+    margin-top: 50px;
     & .list-item {
+      margin-inline-end: 15px;
       & .item-title {
         font-size: 20px;
         margin: 25px 0 15px;
@@ -111,7 +113,10 @@ export const ListBox = styled(Slider)`
     }
   }
   @media ${devices.xxxl} {
+    margin-top: 70px;
+
     & .list-item {
+      margin-inline-end: 20px;
       & .item-title {
         font-size: 26px;
         margin: 35px 0 15px;
@@ -138,7 +143,7 @@ export const CardBtn = styled(Button)`
   }
   @media ${devices.xxxl} {
     margin-top: 34px;
-    padding: 15px;
+    padding: 10px 15px;
     font-size: 20px;
   }
 `;

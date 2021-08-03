@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const IntroContainer = styled(motion.div)`
   display: flex;
-  max-width: 1460px;
+  max-width: 1800px;
   margin: auto;
   padding: 20px 10px;
   margin-top: 100px;

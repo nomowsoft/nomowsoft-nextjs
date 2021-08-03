@@ -31,7 +31,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1460px;
+  max-width: 1800px;
   margin: auto;
   padding: ${({ scrolled }) => (scrolled ? "5px 10px" : "10px")};
   @media ${devices.sm} {
@@ -75,7 +75,7 @@ export const HeaderBtn = styled(Button)`
     margin-inline-start: 110px;
   }
   @media ${devices.xxxl} {
-    padding: 13px 32px;
+    padding: 13px 25px;
     font-size: 20px;
     margin-inline-start: 210px;
   }

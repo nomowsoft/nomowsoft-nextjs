@@ -3,7 +3,7 @@ import { devices } from "styles/styles";
 import { motion } from "framer-motion";
 
 export const SharedContainer = styled(motion.div)`
-  max-width: 1460px;
+  max-width: 1800px;
   margin: auto;
   padding: 20px 10px;
   @media ${devices.sm} {
