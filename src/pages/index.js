@@ -14,12 +14,12 @@ export default function Home() {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos").then(
-    (response) => response.json()
-  );
+  // const res = await fetch("https://jsonplaceholder.typicode.com/todos").then(
+  //   (response) => response.json()
+  // );
   return {
     props: {
-      data: res,
+      data: {},
     }, // will be passed to the page component as props
   };
 }

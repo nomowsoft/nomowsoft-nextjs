@@ -24,18 +24,18 @@ const Footer = () => {
               nomow <span>soft</span>
             </h4>
             <li>who are we</li>
+            <li>clients</li>
             <li>about us</li>
-            <li>recommended questions</li>
-            <li>recommended questions</li>
+            <li>Frequently Asked Questions</li>
           </Section>
           <Section>
             <h4>services</h4>
-            <li>service 1</li>
-            <li>service 2</li>
-            <li>service 3</li>
-            <li>service 4</li>
-            <li>service 5</li>
-            <li>service 6</li>
+            <li>Website design</li>
+            <li>publicity and advertisement</li>
+            <li>marketing</li>
+            <li>social media</li>
+            <li>Project Management</li>
+            <li>data analysis</li>
           </Section>
           <Section>
             <h4>contact us</h4>
@@ -50,7 +50,7 @@ const Footer = () => {
             <li>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Icon size={25} icon={mail} />
-                <span className="email">monowsoft2021@gmail.com</span>
+                <span className="email">info@nomowsoft.com</span>
               </div>
             </li>
           </Section>

@@ -42,7 +42,7 @@ export const MainTitle = styled(motion.h3)`
     color: ${({ theme }) => theme.colors.secondary};
     position: relative;
 
-    &::before {
+    /* &::before {
       content: "";
       position: absolute;
       bottom: -4px;
@@ -52,7 +52,7 @@ export const MainTitle = styled(motion.h3)`
       height: 2px;
       border-radius: 7px;
       background-color: #e66b27;
-    }
+    } */
     & > div {
       top: 13px;
       width: 12px;

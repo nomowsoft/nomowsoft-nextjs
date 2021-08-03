@@ -67,7 +67,7 @@ export const Section = styled(motion.div)`
     }
     & .email {
       color: ${({ theme }) => theme.colors.primary};
-      font-size: 12px;
+      font-size: 13px;
       font-weight: normal;
       font-stretch: normal;
     }
