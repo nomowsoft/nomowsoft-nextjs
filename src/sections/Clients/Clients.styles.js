@@ -1,12 +1,9 @@
 import styled from "styled-components";
-import { devices, breakpoints } from "styles/styles";
-import { motion } from "framer-motion";
+import { devices } from "styles/styles";
 import {
   SharedContainer,
   SharedTitle,
 } from "sections/Identity/Identity.styles";
-import Slider from "react-slick";
-import { Button } from "components/atoms";
 
 export const ClientBox = styled(SharedContainer)``;
 export const ClientTitle = styled(SharedTitle)``;
@@ -26,7 +23,7 @@ export const ClientContainer = styled.div`
     margin: 80px auto 0;
   }
   @media ${devices.xxxl} {
-    margin: 100px auto 0;
+    margin: 90px auto 0;
   }
 `;
 

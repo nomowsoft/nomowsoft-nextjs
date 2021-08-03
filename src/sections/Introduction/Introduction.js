@@ -1,5 +1,5 @@
 import React from "react";
-import { IntroContainer, MainTitle, Description } from "./Introduction.styles";
+import { IntroContainer, MainTitle } from "./Introduction.styles";
 import Image from "next/image";
 
 const Introduction = () => {
@@ -16,11 +16,6 @@ const Introduction = () => {
           <br />
           that make your life easier
         </MainTitle>
-        <Description>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry is standard dummy text
-          ever since the 1500s
-        </Description>
       </div>
     </IntroContainer>
   );

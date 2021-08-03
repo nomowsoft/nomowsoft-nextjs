@@ -34,33 +34,6 @@ export const ServicesBox = styled(SharedContainer)`
 
 export const ServicesTitle = styled(SharedTitle)``;
 
-export const Description = styled(motion.p)`
-  font-size: 12px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 20px;
-  letter-spacing: normal;
-  color: #808080;
-  @media ${devices.lg} {
-    font-size: 14px;
-    width: 70%;
-  }
-  @media ${devices.xl} {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @media ${devices.xxl} {
-    font-size: 22px;
-    line-height: 35px;
-    width: 60%;
-  }
-  @media ${devices.xxxl} {
-    font-size: 24px;
-    line-height: 40px;
-  }
-`;
-
 export const ListBox = styled(Slider)`
   margin-top: 30px;
   & .slick-next,
@@ -117,12 +90,14 @@ export const ListBox = styled(Slider)`
 
     & .list-item {
       margin-inline-end: 20px;
+      padding-top: 40px;
       & .item-title {
         font-size: 26px;
-        margin: 35px 0 15px;
+        margin: 30px 0;
       }
       & .item-text {
         font-size: 20px;
+        line-height: 28px;
       }
       & .dot {
         width: 30px;

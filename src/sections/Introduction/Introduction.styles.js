@@ -58,7 +58,8 @@ export const MainTitle = styled(motion.h3)`
       top: 13px;
       width: 12px;
       height: 12px;
-      right: -19px;
+      right: ${({ theme }) => (theme.isRtl ? "auto" : "-19px")};
+      left: ${({ theme }) => (theme.isRtl ? "-42px" : "auto")};
     }
   }
   @media ${devices.xl} {
@@ -71,37 +72,21 @@ export const MainTitle = styled(motion.h3)`
     }
   }
   @media ${devices.xxl} {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 55px;
+    line-height: 70px;
     & span {
       & > div {
-        top: 17px;
+        top: 20px;
       }
     }
   }
-`;
-
-export const Description = styled(motion.p)`
-  font-size: 12px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 20px;
-  letter-spacing: normal;
-  color: #808080;
-  @media ${devices.lg} {
-    width: 45%;
-    font-size: 14px;
-  }
-  @media ${devices.xl} {
-    font-size: 20px;
-  }
-  @media ${devices.xxl} {
-    font-size: 22px;
-    line-height: 35px;
-  }
   @media ${devices.xxxl} {
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 60px;
+    line-height: 90px;
+    & span {
+      & > div {
+        top: 18px;
+      }
+    }
   }
 `;
