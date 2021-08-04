@@ -31,7 +31,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1900px;
+  max-width: 1850px;
   margin: auto;
   padding: ${({ scrolled }) => (scrolled ? "5px 10px" : "10px")};
   @media ${devices.sm} {
@@ -44,10 +44,10 @@ export const HeaderContainer = styled.div`
     padding: ${({ scrolled }) => (scrolled ? "12px 20px" : "17px 20px")};
   }
   @media ${devices.xl} {
-    padding: ${({ scrolled }) => (scrolled ? "20px 25px" : "27px 25px")};
+    padding: ${({ scrolled }) => (scrolled ? "20px 28px" : "27px 28px")};
   }
   @media ${devices.xxxl} {
-    padding: ${({ scrolled }) => (scrolled ? "20px 25px" : "30px 25px")};
+    padding: ${({ scrolled }) => (scrolled ? "20px 28px" : "30px 28px")};
   }
 `;
 

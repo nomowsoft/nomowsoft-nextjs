@@ -34,7 +34,7 @@ const Header = () => {
             <Link href="/">Home</Link>
           </HeaderLink>
           <HeaderLink>
-            <Link href="/">Blog</Link>
+            <Link href="/blogs">Blog</Link>
           </HeaderLink>
           <HeaderBtn title="Start a Demo" btnStyle="success" small />
         </ElementBox>

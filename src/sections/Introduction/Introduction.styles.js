@@ -41,18 +41,7 @@ export const MainTitle = styled(motion.h3)`
   & span {
     color: ${({ theme }) => theme.colors.secondary};
     position: relative;
-
-    /* &::before {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      right: ${({ theme }) => (!theme.isRtl ? "unset" : 0)};
-      left: ${({ theme }) => (theme.isRtl ? "unset" : 0)};
-      width: 110%;
-      height: 2px;
-      border-radius: 7px;
-      background-color: #e66b27;
-    } */
+    /* cursor: pointer; */
     & > div {
       top: 13px;
       width: 12px;

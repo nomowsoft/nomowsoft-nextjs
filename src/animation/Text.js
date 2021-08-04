@@ -11,7 +11,7 @@ export function SplitLetters({ children, ...rest }) {
         style={{ display: "inline-block" }}
         custom={i}
       >
-        {word + (i !== words.length - 1 ? "\u00A0" : "")}
+        {word}
       </motion.span>
     );
   });
