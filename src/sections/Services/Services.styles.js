@@ -9,10 +9,10 @@ import { Button } from "components/atoms";
 
 export const ServicesContainer = styled.div`
   width: 100%;
-  background: linear-gradient(to bottom, #f2f1f1 -18%, #edecee);
+  background: ${({ theme }) => theme.colors.linear};
   padding-bottom: 20px;
   padding-top: 20px;
-  margin: 20px auto 0;
+  margin: 20px auto;
   @media ${devices.lg} {
     margin: 40px auto 0;
   }
@@ -31,7 +31,9 @@ export const ServicesBox = styled(SharedContainer)`
   margin: auto;
 `;
 
-export const ServicesTitle = styled(SharedTitle)``;
+export const ServicesTitle = styled(SharedTitle)`
+  margin-top: 40px;
+`;
 
 export const ListBox = styled(Slider)`
   margin-top: 30px;
@@ -49,7 +51,7 @@ export const ListBox = styled(Slider)`
   & .list-item {
     padding: 20px 24px;
     border-radius: 6px;
-    background: #fff;
+    background: ${({ theme }) => theme.colors.bg_100};
     margin-inline-end: 5px;
     & .item-title {
       font-size: 14px;
@@ -57,10 +59,11 @@ export const ListBox = styled(Slider)`
       text-transform: capitalize;
     }
     & .item-text {
-      color: #808080;
+      color: ${({ theme }) => theme.colors.text_100};
       font-size: 12px;
       margin: 10px 0;
       line-height: 20px;
+      opacity: 0.4;
       text-transform: capitalize;
     }
     & .dot {

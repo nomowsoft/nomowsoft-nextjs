@@ -5,7 +5,7 @@ const IconButton = styled.div`
   align-items: center;
   justify-content: center;
   padding: 5px;
-  background: ${({ theme }) => theme.colors.muted};
+  background: ${({ theme }) => theme.colors.bg_100};
   border-radius: 6px;
   width: 35px;
   height: 35px;

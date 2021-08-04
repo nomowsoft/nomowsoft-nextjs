@@ -7,13 +7,13 @@ import {
 // import Image from 'next/image';
 
 export const AboutBox = styled(SharedContainer)`
-  background: linear-gradient(to bottom, #f2f1f1 -18%, #edecee);
+  background: ${({ theme }) => theme.colors.linear};
 `;
 export const AboutTitle = styled(SharedTitle)`
   text-align: center;
   padding-bottom: 24px;
   width: 80%;
-  margin: auto;
+  margin: 40px auto 0;
 `;
 
 export const AboutContainer = styled.div`
@@ -58,7 +58,7 @@ export const ListItems = styled.div`
   justify-content: center;
   & .item {
     width: 100%;
-    background: #fff;
+    background: ${({ theme }) => theme.colors.bg_100};
     border-radius: 12px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.08);
     padding: 30px 24px;
@@ -77,11 +77,13 @@ export const ListItems = styled.div`
       margin-top: 40px;
       line-height: 24px;
       font-size: 15px;
-      color: #808080;
+      opacity: 0.4;
+      color: ${({ theme }) => theme.colors.text_100};
     }
     & .user-box {
       display: flex;
       align-items: center;
+      margin-top: 50px;
       & .user-image {
         border-radius: 50%;
       }

@@ -24,11 +24,13 @@ const light = {
     primary: "#217371",
     secondary: "#e66b27",
     bg: "#fff",
+    bg_100: "#fff",
     muted: "#f8f9fb",
     text: "#000",
-
-    gray_100: "#00000014",
-    gray_200: "#373737",
+    text_50: "#373737",
+    text_100: "#808080",
+    shadow: "rgba(151, 151, 151, 0.16)",
+    linear: "linear-gradient(to bottom, #fff -11%, #fcfaff)",
   },
 };
 
@@ -36,11 +38,14 @@ const dark = {
   colors: {
     primary: "#217371",
     secondary: "#e66b27",
-    bg: "#000",
+    bg: "#2c3e50",
+    bg_100: "#364553",
     muted: "#262626",
     text: "#fff",
-    gray_100: "#373535",
-    gray_200: "#373737",
+    text_50: "#fff",
+    text_100: "#fff",
+    shadow: "#2c3e50",
+    linear: "linear-gradient(to bottom, #2c3e50 -11%, #263748)",
   },
 };
 

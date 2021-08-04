@@ -15,8 +15,8 @@ const Clients = () => {
         <BoxSlider>
           <motion.div
             className="box"
-            // animate={{ x: "-50%" }}
-            // transition={{ duration: 20, ease: "linear", repeat: 200 }}
+            animate={{ x: "-50%" }}
+            transition={{ duration: 20, ease: "linear", repeat: 200 }}
           >
             <div className="box-clone-list">
               {[...Array(6).keys()].map((i) => (
