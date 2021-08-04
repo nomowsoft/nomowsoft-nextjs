@@ -25,7 +25,7 @@ export const SharedTitle = styled.h4`
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #373737;
+  color: ${({ theme }) => theme.colors.text_50};
   text-transform: capitalize;
   @media ${devices.lg} {
     font-size: 24px;
@@ -55,11 +55,13 @@ export const InfoSection = styled(motion.div)`
 export const IdentityIconBox = styled.div`
   width: 80px;
   height: 80px;
-  box-shadow: 0 8px 52px 0 rgb(151 151 151 / 56%);
+  box-shadow: 0 8px 52px 0 ${({ theme }) => theme.colors.shadow};
   background-color: #ffffff;
   border-radius: 50%;
   margin-inline-end: 25px;
   overflow: hidden;
+  background: ${({ theme }) => theme.colors.bg_100};
+
   @media ${devices.lg} {
     width: 200px;
     height: 200px;
@@ -77,7 +79,9 @@ export const Description = styled(motion.p)`
   font-style: normal;
   line-height: 20px;
   letter-spacing: normal;
-  color: #808080;
+  color: ${({ theme }) => theme.colors.text_100};
+  opacity: 0.4;
+
   @media ${devices.lg} {
     font-size: 14px;
     width: 70%;

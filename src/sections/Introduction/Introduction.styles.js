@@ -37,7 +37,7 @@ export const MainTitle = styled(motion.h3)`
   line-height: 40px;
   letter-spacing: normal;
   text-transform: capitalize;
-  color: ${({ theme }) => theme.colors.gray_200};
+  color: ${({ theme }) => theme.colors.text};
   & span {
     color: ${({ theme }) => theme.colors.secondary};
     position: relative;

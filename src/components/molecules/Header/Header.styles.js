@@ -8,7 +8,8 @@ export const HeaderBox = styled(motion.header)`
   position: fixed;
   top: 0;
   transition: padding 0.1s ease-in, background 0.1s ease-in;
-  background-color: ${({ scrolled }) => (scrolled ? "#fff" : "transparent")};
+  background: ${({ scrolled, theme }) =>
+    scrolled ? theme.colors.bg_100 : "transparent"};
   box-shadow: ${({ theme, scrolled }) =>
     scrolled ? `0 2px 5px 0 ${theme.colors.gray_100}` : "unset"};
   z-index: 20;
@@ -86,7 +87,8 @@ export const HeaderLink = styled.span`
   font-size: 11px;
   cursor: pointer;
   font-weight: 500;
-  color: ${({ active }) => (active ? "#217371" : "#808080")};
+  color: ${({ active, theme }) =>
+    active ? theme.colors.primary : theme.colors.text_100};
   position: relative;
   ${({ active }) =>
     active &&

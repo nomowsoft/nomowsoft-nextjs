@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const FooterContainer = styled(motion.footer)`
   width: 100%;
-  background-color: #fff;
+  background: ${({ theme }) => theme.colors.bg};
 `;
 
 export const FooterBox = styled(motion.div)`
@@ -50,14 +50,14 @@ export const Section = styled(motion.div)`
   }
   & li {
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
     margin: 10px 0;
     text-transform: capitalize;
-    color: ${({ theme }) => theme.colors.gray_200};
+    color: ${({ theme }) => theme.colors.text_50};
     & i {
       margin-inline-end: 20px;
       cursor: pointer;
@@ -67,7 +67,7 @@ export const Section = styled(motion.div)`
     }
     & .email {
       color: ${({ theme }) => theme.colors.primary};
-      font-size: 13px;
+      font-size: 14px;
       font-weight: normal;
       font-stretch: normal;
     }
@@ -115,7 +115,7 @@ export const PrivacySection = styled(motion.div)`
   padding: 20px;
   background: ${({ theme }) => theme.colors.primary};
   & span {
-    color: ${({ theme }) => theme.colors.bg};
+    color: #fff;
     font-size: 12px;
   }
   @media ${devices.lg} {
