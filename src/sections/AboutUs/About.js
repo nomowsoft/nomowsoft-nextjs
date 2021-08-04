@@ -14,7 +14,7 @@ const About = () => {
         <AboutTitle>About us</AboutTitle>
         {/* <TitleBorder src={iii} /> */}
         <ListItems>
-          {[...Array(3).keys()].map((i) => (
+          {[...Array(6).keys()].map((i) => (
             <div className="item" key={i}>
               <div className="img" />
               <p className="text">

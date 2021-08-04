@@ -1,10 +1,13 @@
 import React from "react";
-import { Container } from "./ComingSoon.styles";
+import { Container, ContentBox, Heading, Paragraph } from "./ComingSoon.styles";
 
 const ComimgSoon = () => {
   return (
     <Container>
-      <div>dfgdfgdfgdfg</div>
+      <ContentBox>
+        <Heading>Coming soon</Heading>
+        <Paragraph>we will launch this page soon</Paragraph>
+      </ContentBox>
     </Container>
   );
 };

@@ -99,30 +99,26 @@ export const ListItems = styled.div`
     }
   }
   @media ${devices.lg} {
-    margin: 30px auto 0;
+    margin: 20px auto 0;
     & .item {
       margin: 0;
       max-width: 225px;
-      &:nth-child(2) {
-        margin: 0 20px;
-      }
+      margin-inline-end: 20px;
+      margin-top: 10px;
     }
   }
   @media ${devices.xl} {
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     & .item {
       max-width: 300px;
-      margin: 0;
-      &:nth-child(2) {
-        margin: 0 20px;
-      }
     }
   }
   @media ${devices.xxl} {
-    margin: 50px 0 0;
+    margin: 40px 0 0;
     & .item {
       max-width: 370px;
       position: relative;
+      margin-inline-end: 50px;
       &::before {
         content: "";
         position: absolute;
@@ -137,16 +133,16 @@ export const ListItems = styled.div`
         background-position: center;
         z-index: 1;
       }
-      &:last-child::before {
-        display: none;
-      }
-      &:nth-child(2) {
-        margin: 0 55px;
+      &:nth-child(3n + 3) {
+        margin: 10 0 0;
+        &::before {
+          display: none;
+        }
       }
     }
   }
   @media ${devices.xxxl} {
-    margin: 70px auto 0;
+    margin: 60px auto 0;
     & .item {
       max-width: 470px;
     }
