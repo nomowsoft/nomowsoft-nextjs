@@ -53,31 +53,27 @@ const Introduction = () => {
 
   return (
     <IntroContainer>
-      <div>
-        <MainTitle>
-          We make
-          <AnimatePresence>
-            {wordsList.map(
-              (word, i) =>
-                active === i && (
-                  <SplitLetters
-                    key={i}
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate="visible"
-                    exit="exit"
-                    variants={variant}
-                    // onClick={() => handleChange(i)}
-                  >
-                    {word}
-                    {/* <Image src="/assets/circle.svg" alt="" width="12px" height="12px" /> */}
-                  </SplitLetters>
-                )
-            )}
-          </AnimatePresence>
-          <br />
-          that make your life easier
-        </MainTitle>
-      </div>
+      <MainTitle>
+        We make
+        <AnimatePresence>
+          {wordsList.map(
+            (word, i) =>
+              active === i && (
+                <SplitLetters
+                  key={i}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate="visible"
+                  exit="exit"
+                  variants={variant}
+                >
+                  {word}
+                </SplitLetters>
+              )
+          )}
+        </AnimatePresence>
+        <br />
+        that make your life easier
+      </MainTitle>
     </IntroContainer>
   );
 };

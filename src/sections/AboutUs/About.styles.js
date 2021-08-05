@@ -6,7 +6,8 @@ import {
 } from "sections/Identity/Identity.styles";
 // import Image from 'next/image';
 
-export const AboutBox = styled(SharedContainer)`
+export const AboutBox = styled.div`
+  width: 100%;
   background: ${({ theme }) => theme.colors.linear};
 `;
 export const AboutTitle = styled(SharedTitle)`
@@ -16,7 +17,7 @@ export const AboutTitle = styled(SharedTitle)`
   margin: 40px auto 0;
 `;
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled(SharedContainer)`
   width: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
@@ -104,7 +105,7 @@ export const ListItems = styled.div`
     margin: 20px auto 0;
     & .item {
       margin: 0;
-      max-width: 225px;
+      max-width: 300px;
       margin-inline-end: 20px;
       margin-top: 10px;
     }
