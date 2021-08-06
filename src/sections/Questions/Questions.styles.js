@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { devices } from "styles/styles";
 import { motion } from "framer-motion";
 import {
@@ -35,7 +35,7 @@ export const Item = styled.div`
   border-radius: 4px;
   margin: 0 10px 10px;
   padding: 24px 26px;
-  height: fit-content;
+  /* height: fit-content; */
   & .title-box {
     cursor: pointer;
     display: flex;
@@ -52,6 +52,10 @@ export const Item = styled.div`
     opacity: 0.4;
   }
   @media ${devices.lg} {
+    ${({ active }) => active && css`
+      grid-column-end: span 1;
+      grid-row-end: span 2;
+    `}
     & .title-box {
       & h3 {
         font-size: 15px;
