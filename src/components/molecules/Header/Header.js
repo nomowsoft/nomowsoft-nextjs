@@ -32,7 +32,9 @@ const Header = () => {
         {/* right */}
         <ElementBox>
           {/* links */}
-          <HeaderLink active={pathname === "/"}>
+          <HeaderLink
+            active={pathname === "/" || pathname === "/recommended_questions"}
+          >
             <Link href="/">Home</Link>
           </HeaderLink>
           <HeaderLink active={pathname === "/blogs"}>

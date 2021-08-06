@@ -3,7 +3,7 @@ import { ComingSoon } from "sections";
 
 export default function Blogs() {
   return (
-    <PageTemplate title="Home Page">
+    <PageTemplate title="Blogs">
       <ComingSoon />
     </PageTemplate>
   );
