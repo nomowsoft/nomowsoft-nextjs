@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { devices } from "styles/styles";
 
 export const Container = styled.div`
-  background: linear-gradient(to bottom, #f2f1f1 -18%, #edecee);
+  background: ${({ theme }) => theme.colors.linear};
   height: 100vh;
   display: flex;
   align-items: center;
@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const ContentBox = styled.div`
-  background: #fff;
+  background: ${({ theme }) => theme.colors.bg_100};
   border-radius: 20px;
   padding: 20px;
   @media ${devices.sm} {

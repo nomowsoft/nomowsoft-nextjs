@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import Link from "next/link";
 import {
   FooterContainer,
   FooterBox,
@@ -26,7 +26,11 @@ const Footer = () => {
             <li>who are we</li>
             <li>clients</li>
             <li>about us</li>
-            <li>Frequently Asked Questions</li>
+            <li>
+              <Link href="/recommended_questions">
+                Frequently Asked Questions
+              </Link>
+            </li>
           </Section>
           <Section>
             <h4>services</h4>

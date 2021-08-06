@@ -4,5 +4,14 @@ import Services from "./Services";
 import Clients from "./Clients";
 import AboutUs from "./AboutUs";
 import ComingSoon from "./ComingSoon";
+import Questions from "./Questions";
 
-export { Introduction, Identity, Services, Clients, AboutUs, ComingSoon };
+export {
+  Introduction,
+  Identity,
+  Services,
+  Clients,
+  AboutUs,
+  ComingSoon,
+  Questions,
+};

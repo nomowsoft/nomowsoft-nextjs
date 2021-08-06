@@ -4,16 +4,6 @@ import { IntroContainer, MainTitle } from "./Introduction.styles";
 import { AnimatePresence } from "framer-motion";
 import { SplitLetters } from "animation/Text";
 
-// const container = {
-//   hidden: {
-//     y: "200%",
-//     transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
-//   },
-//   visible: {
-//     y: 0,
-//     transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
-//   },
-// };
 const variant = {
   visible: (i) => ({
     y: 0,
@@ -53,31 +43,27 @@ const Introduction = () => {
 
   return (
     <IntroContainer>
-      <div>
-        <MainTitle>
-          We make
-          <AnimatePresence>
-            {wordsList.map(
-              (word, i) =>
-                active === i && (
-                  <SplitLetters
-                    key={i}
-                    initial={{ y: "100%", opacity: 0 }}
-                    animate="visible"
-                    exit="exit"
-                    variants={variant}
-                    // onClick={() => handleChange(i)}
-                  >
-                    {word}
-                    {/* <Image src="/assets/circle.svg" alt="" width="12px" height="12px" /> */}
-                  </SplitLetters>
-                )
-            )}
-          </AnimatePresence>
-          <br />
-          that make your life easier
-        </MainTitle>
-      </div>
+      <MainTitle>
+        We make
+        <AnimatePresence>
+          {wordsList.map(
+            (word, i) =>
+              active === i && (
+                <SplitLetters
+                  key={i}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate="visible"
+                  exit="exit"
+                  variants={variant}
+                >
+                  {word}
+                </SplitLetters>
+              )
+          )}
+        </AnimatePresence>
+        <br />
+        that make your life easier
+      </MainTitle>
     </IntroContainer>
   );
 };
