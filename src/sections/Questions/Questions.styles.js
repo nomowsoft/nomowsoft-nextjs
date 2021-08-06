@@ -52,16 +52,20 @@ export const Item = styled.div`
     opacity: 0.4;
   }
   @media ${devices.lg} {
-    & h3 {
-      font-size: 15px;
+    & .title-box {
+      & h3 {
+        font-size: 15px;
+      }
     }
     & .description {
       font-size: 15px;
     }
   }
   @media ${devices.xxl} {
-    & h3 {
-      font-size: 18px;
+    & .title-box {
+      & h3 {
+        font-size: 18px;
+      }
     }
     & .description {
       font-size: 18px;
@@ -69,7 +73,9 @@ export const Item = styled.div`
   }
   @media ${devices.xxxl} {
     & .title-box {
-      font-size: 20px;
+      & h3 {
+        font-size: 20px;
+      }
     }
     & .description {
       font-size: 20px;
