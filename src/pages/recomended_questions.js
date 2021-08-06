@@ -1,7 +1,7 @@
 import PageTemplate from "components/Templates/PageTemplate";
 import { ComingSoon } from "sections";
 
-export default function Blogs() {
+function Questions() {
   return (
     <PageTemplate title="Home Page">
       <ComingSoon />
@@ -9,10 +9,4 @@ export default function Blogs() {
   );
 }
 
-export async function getServerSideProps() {
-  return {
-    props: {
-      data: {},
-    },
-  };
-}
+export default Questions;
