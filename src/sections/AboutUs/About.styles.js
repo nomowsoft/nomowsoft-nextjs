@@ -131,7 +131,8 @@ export const ListItems = styled.div`
         top: calc(50% - 50px);
         left: auto;
         background-size: contain;
-        right: -76px;
+        right: ${({ theme }) => (theme.isRtl ? "auto" : "-76px")};
+        left: ${({ theme }) => (theme.isRtl ? "-76px" : "auto")};
         background-repeat: no-repeat;
         background-position: center;
         z-index: 1;

@@ -6,12 +6,14 @@ import {
   AboutContainer,
 } from "./About.styles";
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 
 const About = () => {
+  const i18n = useTranslation();
   return (
-    <AboutBox>
+    <AboutBox id="about_us">
       <AboutContainer>
-        <AboutTitle>About us</AboutTitle>
+        <AboutTitle>{i18n.t("common:about_us")}</AboutTitle>
         {/* <TitleBorder src={iii} /> */}
         <ListItems>
           {[...Array(6).keys()].map((i) => (

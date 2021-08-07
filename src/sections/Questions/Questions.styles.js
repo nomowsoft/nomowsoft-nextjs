@@ -52,10 +52,12 @@ export const Item = styled.div`
     opacity: 0.4;
   }
   @media ${devices.lg} {
-    ${({ active }) => active && css`
-      grid-column-end: span 1;
-      grid-row-end: span 2;
-    `}
+    ${({ active }) =>
+      active &&
+      css`
+        grid-column-end: span 1;
+        grid-row-end: span 2;
+      `}
     & .title-box {
       & h3 {
         font-size: 15px;

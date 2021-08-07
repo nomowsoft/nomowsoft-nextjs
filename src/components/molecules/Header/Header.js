@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import ColorModeSwitch from "../ColorModeSwitch";
 import { Spacer } from "components/atoms";
 import useScroll from "components/hooks/useScrolled";
+import useTranslation from "next-translate/useTranslation";
 
 import LangSwitcher from "../LangSwitch";
 import {
@@ -18,6 +19,7 @@ import {
 const Header = () => {
   const { scrolled } = useScroll();
   const { pathname } = useRouter();
+  const i18n = useTranslation();
 
   return (
     <HeaderBox scrolled={scrolled}>
@@ -35,12 +37,16 @@ const Header = () => {
           <HeaderLink
             active={pathname === "/" || pathname === "/recommended_questions"}
           >
-            <Link href="/">Home</Link>
+            <Link href="/">{i18n.t("common:home")}</Link>
           </HeaderLink>
           <HeaderLink active={pathname === "/blogs"}>
-            <Link href="/blogs">Blog</Link>
+            <Link href="/blogs">{i18n.t("common:blog")}</Link>
           </HeaderLink>
-          <HeaderBtn title="Start a Demo" btnStyle="success" small />
+          <HeaderBtn
+            title={i18n.t("common:start_demo")}
+            btnStyle="success"
+            small
+          />
         </ElementBox>
       </HeaderContainer>
     </HeaderBox>

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export function SplitLetters({ children, ...rest }) {
-  let words = children.split("");
+  let words = rest.isWord ? children.split(" ") : children.split("");
   return words.map((word, i) => {
     return (
       <motion.span

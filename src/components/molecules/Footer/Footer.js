@@ -13,8 +13,10 @@ import { facebookSquare } from "react-icons-kit/fa/facebookSquare";
 import { tumblrSquare } from "react-icons-kit/fa/tumblrSquare";
 import { youtubePlay } from "react-icons-kit/fa/youtubePlay";
 import { mail } from "react-icons-kit/feather/mail";
+import useTranslation from "next-translate/useTranslation";
 
 const Footer = () => {
+  const i18n = useTranslation();
   return (
     <React.Fragment>
       <FooterContainer>
@@ -23,26 +25,32 @@ const Footer = () => {
             <h4>
               nomow <span>soft</span>
             </h4>
-            <li>who are we</li>
-            <li>clients</li>
-            <li>about us</li>
+            <li>
+              <Link href="/#who_we_are">{i18n.t("common:who_we_are")}</Link>
+            </li>
+            <li>
+              <Link href="/#clients">{i18n.t("common:clients")}</Link>
+            </li>
+            <li>
+              <Link href="/#about_us">{i18n.t("common:about_us")}</Link>
+            </li>
             <li>
               <Link href="/recommended_questions">
-                Frequently Asked Questions
+                {i18n.t("common:frequently_questions")}
               </Link>
             </li>
           </Section>
           <Section>
-            <h4>services</h4>
-            <li>Website design</li>
-            <li>publicity and advertisement</li>
-            <li>marketing</li>
-            <li>social media</li>
-            <li>Project Management</li>
-            <li>data analysis</li>
+            <h4>{i18n.t("common:services")}</h4>
+            <li>{i18n.t("common:Website_design")}</li>
+            <li>{i18n.t("common:publicity_advertisement")}</li>
+            <li>{i18n.t("common:marketing")}</li>
+            <li>{i18n.t("common:social_media")}</li>
+            <li>{i18n.t("common:project_management")}</li>
+            <li>{i18n.t("common:data_analysis")}</li>
           </Section>
           <Section>
-            <h4>contact us</h4>
+            <h4>{i18n.t("common:contact_us")}</h4>
             <li>
               <div style={{ display: "flex" }}>
                 <Icon size={25} icon={facebookSquare} />
@@ -61,7 +69,7 @@ const Footer = () => {
         </FooterBox>
       </FooterContainer>
       <PrivacySection>
-        <span>All rights reserved to nomow company</span>
+        <span>{i18n.t("common:all_rights_reserved")}</span>
       </PrivacySection>
     </React.Fragment>
   );
