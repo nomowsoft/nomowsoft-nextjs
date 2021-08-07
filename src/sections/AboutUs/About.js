@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <AboutBox>
+    <AboutBox id="about_us">
       <AboutContainer>
         <AboutTitle>About us</AboutTitle>
         {/* <TitleBorder src={iii} /> */}

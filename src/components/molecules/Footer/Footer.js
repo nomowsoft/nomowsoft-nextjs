@@ -23,9 +23,15 @@ const Footer = () => {
             <h4>
               nomow <span>soft</span>
             </h4>
-            <li>who are we</li>
-            <li>clients</li>
-            <li>about us</li>
+            <li>
+              <Link href="/#who_we_are">who we are</Link>
+            </li>
+            <li>
+              <Link href="/#clients">clients</Link>
+            </li>
+            <li>
+              <Link href="/#about_us">about us</Link>
+            </li>
             <li>
               <Link href="/recommended_questions">
                 Frequently Asked Questions

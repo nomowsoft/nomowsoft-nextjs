@@ -9,7 +9,7 @@ import {
 
 const Identity = () => {
   return (
-    <IdentityContainer>
+    <IdentityContainer id="who_we_are">
       <IdentityIconBox>i</IdentityIconBox>
       <InfoSection>
         <IdentityTitle>

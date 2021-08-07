@@ -9,7 +9,7 @@ import {
 
 const Clients = () => {
   return (
-    <ClientBox>
+    <ClientBox id="clients">
       <ClientContainer>
         <ClientTitle>Clients</ClientTitle>
         <BoxSlider>

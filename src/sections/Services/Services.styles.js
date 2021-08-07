@@ -40,13 +40,15 @@ export const ListBox = styled(Slider)`
   & .slick-next,
   & .slick-prev {
     position: absolute;
-    top: -14px;
-    right: ${({ theme }) => (theme.isRtl ? "calc(100% - 50px)" : "auto")};
-    left: ${({ theme }) => (theme.isRtl ? "auto" : "calc(100% - 25px)")};
+    top: -48px;
+    opacity: 0;
+    right: ${({ theme }) => (theme.isRtl ? "calc(100% - 57px)" : "auto")};
+    left: ${({ theme }) => (theme.isRtl ? "auto" : "calc(100% - 29px)")};
   }
   & .slick-prev {
+    top: -20px;
     right: ${({ theme }) => (theme.isRtl ? "calc(100% - 25px)" : "auto")};
-    left: ${({ theme }) => (theme.isRtl ? "auto" : "calc(100% - 55px)")};
+    left: ${({ theme }) => (theme.isRtl ? "auto" : "calc(100% - 62px)")};
   }
   & .list-item {
     padding: 20px 24px;
@@ -73,6 +75,22 @@ export const ListBox = styled(Slider)`
       display: block;
       background: #e66c35;
     }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url("/assets/change.svg");
+    top: -70px;
+    left: auto;
+    background-size: contain;
+    right: ${({ theme }) => (theme.isRtl ? "auto" : "0")};
+    left: ${({ theme }) => (theme.isRtl ? "-3px" : "auto")};
+
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
   }
   @media ${devices.xxl} {
     margin-top: 50px;
