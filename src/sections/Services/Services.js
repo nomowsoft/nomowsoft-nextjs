@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import { ThemeContext } from "styled-components";
 import {
@@ -11,11 +12,12 @@ import {
 
 const Services = () => {
   const theme = React.useContext(ThemeContext);
+  const i18n = useTranslation();
 
   return (
     <ServicesContainer>
       <ServicesBox>
-        <ServicesTitle>Services</ServicesTitle>
+        <ServicesTitle>{i18n.t("common:services")}</ServicesTitle>
         {/* List */}
         <ListBox {...sliderSettings} rtl={theme.isRtl}>
           <div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import {
   ClientContainer,
@@ -8,10 +9,11 @@ import {
 } from "./Clients.styles";
 
 const Clients = () => {
+  const i18n = useTranslation();
   return (
     <ClientBox id="clients">
       <ClientContainer>
-        <ClientTitle>Clients</ClientTitle>
+        <ClientTitle>{i18n.t("common:clients")}</ClientTitle>
         <BoxSlider>
           <motion.div
             className="box"

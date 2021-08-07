@@ -1,3 +1,4 @@
+import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import {
   IdentityContainer,
@@ -8,14 +9,17 @@ import {
 } from "./Identity.styles";
 
 const Identity = () => {
+  const i18n = useTranslation();
+
   return (
     <IdentityContainer id="who_we_are">
       <IdentityIconBox>i</IdentityIconBox>
       <InfoSection>
         <IdentityTitle>
-          Who{" "}
+          {i18n.t("common:who")}{" "}
           <span style={{ color: "#217371" }}>
-            nomow <span style={{ color: "#e66b27" }}>soft</span>
+            {i18n.t("common:nomow")}{" "}
+            <span style={{ color: "#e66b27" }}>{i18n.t("common:soft")}</span>
           </span>
         </IdentityTitle>
         <Description>

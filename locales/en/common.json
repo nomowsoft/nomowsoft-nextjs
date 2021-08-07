@@ -1,3 +1,27 @@
 {
-  "title": "Hello world"
+  "home": "Home",
+  "blog": "Blog",
+  "start_demo": "Start a Demo",
+  "who_we_are": "Who we are",
+  "clients": "Clients",
+  "about_us": "About us",
+  "frequently_questions": "Frequently Questions",
+  "services": "services",
+  "Website_design": "Website design",
+  "publicity_advertisement": "publicity and advertisement",
+  "marketing": "marketing",
+  "social_media": "social media",
+  "project_management": "project management",
+  "data_analysis": "data analysis",
+  "contact_us": "Contact us",
+  "who": "Who",
+  "nomow": "Nomow",
+  "soft": "Soft",
+  "we_make": "We make",
+  "make_easer": "That Make Your Life Easier",
+  "products": "Products",
+  "web_sites": "Web  Sites",
+  "Application": "Applications",
+  "all_rights_reserved": "All rights reserved to nomow company"
+
 }
