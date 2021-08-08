@@ -18,12 +18,12 @@ import {
 
 const Header = () => {
   const { scrolled } = useScroll();
-  const { pathname } = useRouter();
+  const { pathname, push } = useRouter();
   const i18n = useTranslation();
 
   return (
     <HeaderBox scrolled={scrolled}>
-      <HeaderContainer>
+      <HeaderContainer scrolled={scrolled}>
         {/* left */}
         <ElementBox>
           <ColorModeSwitch />
@@ -46,6 +46,7 @@ const Header = () => {
             title={i18n.t("common:start_demo")}
             btnStyle="success"
             small
+            onClick={() => push("/start_demo")}
           />
         </ElementBox>
       </HeaderContainer>

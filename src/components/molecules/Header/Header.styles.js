@@ -11,15 +11,15 @@ export const HeaderBox = styled(motion.header)`
   background: ${({ scrolled, theme }) =>
     scrolled ? theme.colors.bg_100 : "transparent"};
   box-shadow: ${({ theme, scrolled }) =>
-    scrolled ? `0 2px 5px 0 ${theme.colors.gray_100}` : "unset"};
+    scrolled ? `0 2px 5px 0 ${theme.colors.muted}` : "unset"};
   z-index: 20;
   @media ${devices.xl} {
     box-shadow: ${({ theme, scrolled }) =>
-      scrolled ? `0 2px 15px 0 ${theme.colors.gray_100}` : "unset"};
+      scrolled ? `0 2px 15px 0 ${theme.colors.muted}` : "unset"};
   }
   @media ${devices.xxxl} {
     box-shadow: ${({ theme, scrolled }) =>
-      scrolled ? `0 2px 15px 0 ${theme.colors.gray_100}` : "unset"};
+      scrolled ? `0 2px 15px 0 ${theme.colors.muted}` : "unset"};
   }
 `;
 
@@ -34,6 +34,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   max-width: 1850px;
   margin: auto;
+  transition: padding 0.3s ease-in-out;
   padding: ${({ scrolled }) => (scrolled ? "5px 10px" : "10px")};
   @media ${devices.sm} {
     padding: ${({ scrolled }) => (scrolled ? "11px 20px" : "15px 20px")};
@@ -47,7 +48,7 @@ export const HeaderContainer = styled.div`
   @media ${devices.xl} {
     padding: ${({ scrolled }) => (scrolled ? "20px 28px" : "27px 28px")};
   }
-  @media ${devices.xxxl} {
+  @media ${devices.xxl} {
     padding: ${({ scrolled }) => (scrolled ? "20px 28px" : "30px 28px")};
   }
 `;

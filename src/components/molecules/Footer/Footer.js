@@ -10,8 +10,8 @@ import {
 import { Icon } from "react-icons-kit";
 import { twitterSquare } from "react-icons-kit/fa/twitterSquare";
 import { facebookSquare } from "react-icons-kit/fa/facebookSquare";
-import { tumblrSquare } from "react-icons-kit/fa/tumblrSquare";
-import { youtubePlay } from "react-icons-kit/fa/youtubePlay";
+import { whatsapp } from "react-icons-kit/fa/whatsapp";
+import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
 import { mail } from "react-icons-kit/feather/mail";
 import useTranslation from "next-translate/useTranslation";
 
@@ -54,9 +54,9 @@ const Footer = () => {
             <li>
               <div style={{ display: "flex" }}>
                 <Icon size={25} icon={facebookSquare} />
-                <Icon size={25} icon={tumblrSquare} />
+                <Icon size={25} icon={linkedinSquare} />
                 <Icon size={25} icon={twitterSquare} />
-                <Icon size={25} icon={youtubePlay} />
+                <Icon size={25} icon={whatsapp} />
               </div>
             </li>
             <li>

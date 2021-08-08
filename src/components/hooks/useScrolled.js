@@ -14,7 +14,6 @@ const useScroll = () => {
       return () => window.removeEventListener("scroll", handleScrolling);
     }
   });
-
   return { scrolled };
 };
 
