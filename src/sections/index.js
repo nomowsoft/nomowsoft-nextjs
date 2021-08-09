@@ -4,6 +4,7 @@ import Services from "./Services";
 import Clients from "./Clients";
 import AboutUs from "./AboutUs";
 import ComingSoon from "./ComingSoon";
+import StartForm from "./StartForm";
 import Questions from "./Questions";
 
 export {
@@ -14,4 +15,5 @@ export {
   AboutUs,
   ComingSoon,
   Questions,
+  StartForm,
 };
