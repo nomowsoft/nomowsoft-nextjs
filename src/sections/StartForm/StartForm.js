@@ -14,19 +14,19 @@ import {
 const StartForm = () => {
   const [state, setState] = React.useState({});
 
-  // const theme = React.useContext(ThemeContext);
-  // const i18n = useTranslation();
-  // const { push } = useRouter();
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`state`, state);
+  };
 
-  console.log(`state`, state)
   return (
     <StartFormBox>
       <StartFormContainer>
         <p>logo here</p>
-        <Form onSubmit={() => console.log(`state`, state)}>
+        <Form onSubmit={handleSubmit}>
           <Label>
             first name
             <TextInput
@@ -40,7 +40,7 @@ const StartForm = () => {
             last name
             <TextInput
               name="last_name"
-              value={state.first_name}
+              value={state.last_name}
               required
               onChange={handleChange}
             />
@@ -49,7 +49,7 @@ const StartForm = () => {
             email
             <TextInput
               name="email"
-              value={state.first_name}
+              value={state.email}
               required
               onChange={handleChange}
             />
@@ -65,13 +65,7 @@ const StartForm = () => {
             />
           </Label>
           <FormFoot>
-            <SubmitBtn
-              title="submit"
-              type="submit"
-              btnStyle="success"
-              small
-              onClick={() => console.log(`state`, state)}
-            />
+            <SubmitBtn title="submit" type="submit" btnStyle="success" small />
           </FormFoot>
         </Form>
       </StartFormContainer>
