@@ -1,4 +1,5 @@
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 import React from "react";
 import {
   IdentityContainer,
@@ -13,7 +14,11 @@ const Identity = () => {
 
   return (
     <IdentityContainer id="who_we_are">
-      <IdentityIconBox>i</IdentityIconBox>
+      <IdentityIconBox>
+        <div style={{ position: "relative", width: "80%", height: "80%" }}>
+          <Image src="/assets/logo.svg" layout="fill" alt="" />
+        </div>
+      </IdentityIconBox>
       <InfoSection>
         <IdentityTitle>
           {i18n.t("common:who")}{" "}

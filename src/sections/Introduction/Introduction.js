@@ -5,6 +5,7 @@ import { IntroContainer, MainTitle } from "./Introduction.styles";
 // import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
 import { SplitLetters } from "animation/Text";
+import Image from "next/image";
 
 const variant = {
   visible: (i) => ({
@@ -63,6 +64,17 @@ const Introduction = () => {
         <br />
         {i18n.t("common:make_easer")}
       </MainTitle>
+      <div>
+        <Image
+          src="/assets/header_pic.svg"
+          layout="fill"
+          alt=""
+          className="header-image"
+        />
+
+      </div>
+      {/* <div className="icon-box">
+      </div> */}
     </IntroContainer>
   );
 };

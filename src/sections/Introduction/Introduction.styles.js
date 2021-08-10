@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { devices } from "styles/styles";
 import { motion } from "framer-motion";
 
@@ -7,9 +7,25 @@ export const IntroContainer = styled(motion.div)`
   max-width: 1850px;
   margin: auto;
   padding: 20px 10px;
-  margin-top: 100px;
+  padding-top: 100px;
+  position: relative;
+  /* background-image: url("/assets/header_pic.svg"); */
+  & .header-image {
+    /* display: none !important; */
+    display: none;
+    min-width: 50% !important;
+    height: 100% !important;
+    right: ${({ theme }) => (theme.isRtl ? "auto" : "0px")} !important;
+    left: ${({ theme }) => (theme.isRtl ? "-10px" : "auto")} !important;
+    ${({ theme }) =>
+      !theme.isRtl &&
+      css`
+        transform: scalex(-1);
+      `}
+  }
   @media ${devices.sm} {
     padding: 20px;
+    padding-top: 100px;
   }
   @media ${devices.lg} {
     min-height: calc(50vh - 90px);
@@ -17,11 +33,11 @@ export const IntroContainer = styled(motion.div)`
   }
   @media ${devices.xl} {
     padding: 25px;
-    margin-top: 120px;
+    padding-top: 120px;
   }
   @media ${devices.xxl} {
     padding: 28px;
-    margin-top: 80px;
+    padding-top: 80px;
     min-height: calc(100vh - 90px);
   }
   @media ${devices.xxxl} {
