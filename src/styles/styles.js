@@ -50,6 +50,7 @@ const dark = {
 };
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
   * {
     box-sizing: border-box;
   }
@@ -57,29 +58,31 @@ const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    background: ${({ theme }) => theme?.colors.bg};
-    color: ${({ theme }) => theme?.colors.text};
-    font-family: Cairo, Rubik, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     min-height: 100vh;
     direction: ${({ isRtl }) => {
       return isRtl ? "rtl" : "ltr";
     }}
   }
 
+  body,
   .scroll-y {
     overflow-x: hidden;
     overflow-y: auto;
   }
 
+  body::-webkit-scrollbar-track,
   .scroll-y::-webkit-scrollbar-track {
     background-color: transparent;
   }
 
+  body::-webkit-scrollbar,
   .scroll-y::-webkit-scrollbar {
     background-color: transparent;
     width: 5px;
   }
 
+  body::-webkit-scrollbar-thumb,
   .scroll-y::-webkit-scrollbar-thumb {
     background-color: rgba(120, 137, 160, 0.2);
     border-radius: 4px;
@@ -124,6 +127,7 @@ const GlobalStyle = createGlobalStyle`
 
   [lang=ar] body {
     direction: rtl;
+    font-family: Cairo, sans-serif;
   }
 `;
 
