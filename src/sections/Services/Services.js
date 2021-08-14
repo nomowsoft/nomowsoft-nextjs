@@ -1,4 +1,5 @@
 import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 import React from "react";
 import { ThemeContext } from "styled-components";
 import {
@@ -10,9 +11,10 @@ import {
   CardBtn,
 } from "./Services.styles";
 
-const Services = () => {
+const Services = ({ services }) => {
   const theme = React.useContext(ThemeContext);
   const i18n = useTranslation();
+  const { push } = useRouter();
 
   return (
     <ServicesContainer>
@@ -20,61 +22,22 @@ const Services = () => {
         <ServicesTitle>{i18n.t("common:services")}</ServicesTitle>
         {/* List */}
         <ListBox {...sliderSettings} rtl={theme.isRtl}>
-          <div>
-            <div className="list-item">
-              <span className="dot" />
-              <h6 className="item-title">title</h6>
-              <p className="item-text">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration
-              </p>
-              <CardBtn title="request service" btnStyle="success" />
+          {services?.map((service, i) => (
+            <div className="list-item" key={i}>
+              <div>
+                <span className="dot" />
+                <h6 className="item-title">{service.title}</h6>
+                <p className="item-text" title={service.description}>
+                  {service.description}
+                </p>
+              </div>
+              <CardBtn
+                title={i18n.t("common:request_service")}
+                btnStyle="success"
+                onClick={() => push("/start_demo")}
+              />
             </div>
-          </div>
-          <div>
-            <div className="list-item">
-              <span className="dot" />
-              <h6 className="item-title">title</h6>
-              <p className="item-text">
-                There are many variations of passages of Lorem Ipsum available,
-                but but the majority have suffered alteration
-              </p>
-              <CardBtn title="request service" btnStyle="success" />
-            </div>
-          </div>
-          <div>
-            <div className="list-item">
-              <span className="dot" />
-              <h6 className="item-title">title</h6>
-              <p className="item-text">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration
-              </p>
-              <CardBtn title="request service" btnStyle="success" />
-            </div>
-          </div>
-          <div>
-            <div className="list-item">
-              <span className="dot" />
-              <h6 className="item-title">title</h6>
-              <p className="item-text">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration
-              </p>
-              <CardBtn title="request service" btnStyle="success" />
-            </div>
-          </div>
-          <div>
-            <div className="list-item">
-              <span className="dot" />
-              <h6 className="item-title">title</h6>
-              <p className="item-text">
-                There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration
-              </p>
-              <CardBtn title="request service" btnStyle="success" />
-            </div>
-          </div>
+          ))}
         </ListBox>
       </ServicesBox>
     </ServicesContainer>

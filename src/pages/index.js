@@ -1,25 +1,27 @@
 import PageTemplate from "components/Templates/PageTemplate";
 import { Introduction, Identity, Services, Clients, AboutUs } from "sections";
 
-export default function Home() {
+export default function Home({ data }) {
+  console.log(`data`, data)
   return (
-    <PageTemplate title="Home">
+    <PageTemplate title="Home" data={data.company}>
       <Introduction />
-      <Identity />
-      <Services />
-      <Clients />
-      <AboutUs />
+      <Identity about_us={data.company.about_us} />
+      <Services services={data.company.services} />
+      <Clients clients={data.company.clients} />
+      <AboutUs feedbacks={data.company.feedbacks} />
     </PageTemplate>
   );
 }
 
-export async function getServerSideProps() {
-  // const res = await fetch("https://jsonplaceholder.typicode.com/todos").then(
-  //   (response) => response.json()
-  // );
+export async function getServerSideProps({ locale }) {
+  const res = await fetch(
+    `https://nomowsoft.herokuapp.com/v1/companies/1?locale=${locale}`
+  ).then((response) => response.json());
+
   return {
     props: {
-      data: {},
-    }, // will be passed to the page component as props
+      data: res.data,
+    },
   };
 }

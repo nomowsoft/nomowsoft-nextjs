@@ -4,17 +4,18 @@ import PropTypes from "prop-types";
 import { Header, Footer } from "../molecules";
 
 const PageTemplate = (props) => {
-  const { children, title } = props;
+  const { children, title, data } = props;
+
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content="nomow soft" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/assets/logo.svg" />
       </Head>
       <Header />
       <main>{children && children}</main>
-      <Footer />
+      <Footer data={data} />
     </>
   );
 };

@@ -34,6 +34,11 @@ export const FooterBox = styled(motion.div)`
 `;
 
 export const Section = styled(motion.div)`
+  position: relative;
+  & > div {
+    position: absolute !important;
+    top: -20px;
+  }
   & h4 {
     color: ${({ theme }) => theme.colors.primary};
     text-transform: capitalize;
@@ -91,6 +96,9 @@ export const Section = styled(motion.div)`
     & li {
       font-size: 16px;
       margin: 15px 0;
+    }
+    & > div {
+      top: -10px;
     }
   }
   @media ${devices.xxxl} {

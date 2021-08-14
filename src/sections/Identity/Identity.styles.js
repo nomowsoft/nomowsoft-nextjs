@@ -61,7 +61,10 @@ export const IdentityIconBox = styled.div`
   margin-inline-end: 25px;
   overflow: hidden;
   background: ${({ theme }) => theme.colors.bg_100};
-
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media ${devices.lg} {
     width: 200px;
     height: 200px;

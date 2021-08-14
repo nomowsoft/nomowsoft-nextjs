@@ -1,4 +1,5 @@
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 import React from "react";
 import {
   IdentityContainer,
@@ -8,12 +9,16 @@ import {
   IdentityIconBox,
 } from "./Identity.styles";
 
-const Identity = () => {
+const Identity = ({ about_us }) => {
   const i18n = useTranslation();
 
   return (
     <IdentityContainer id="who_we_are">
-      <IdentityIconBox>i</IdentityIconBox>
+      <IdentityIconBox>
+        <div style={{ position: "relative", width: "80%", height: "80%" }}>
+          <Image src="/assets/logo.svg" layout="fill" alt="" />
+        </div>
+      </IdentityIconBox>
       <InfoSection>
         <IdentityTitle>
           {i18n.t("common:who")}{" "}
@@ -22,11 +27,7 @@ const Identity = () => {
             <span style={{ color: "#e66b27" }}>{i18n.t("common:soft")}</span>
           </span>
         </IdentityTitle>
-        <Description>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry is standard dummy text
-          ever{" "}
-        </Description>
+        <Description>{about_us}</Description>
       </InfoSection>
     </IdentityContainer>
   );

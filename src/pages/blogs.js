@@ -1,18 +1,22 @@
 import PageTemplate from "components/Templates/PageTemplate";
 import { ComingSoon } from "sections";
 
-export default function Blogs() {
+export default function Blogs({ data }) {
   return (
-    <PageTemplate title="Blogs">
+    <PageTemplate title="Blogs" data={data.company}>
       <ComingSoon />
     </PageTemplate>
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ locale }) {
+  const res = await fetch(
+    `https://nomowsoft.herokuapp.com/v1/companies/1?locale=${locale}`
+  ).then((response) => response.json());
+
   return {
     props: {
-      data: {},
+      data: res.data,
     },
   };
 }
