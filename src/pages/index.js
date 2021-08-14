@@ -2,7 +2,6 @@ import PageTemplate from "components/Templates/PageTemplate";
 import { Introduction, Identity, Services, Clients, AboutUs } from "sections";
 
 export default function Home({ data }) {
-  console.log(`data`, data)
   return (
     <PageTemplate title="Home" data={data.company}>
       <Introduction />
