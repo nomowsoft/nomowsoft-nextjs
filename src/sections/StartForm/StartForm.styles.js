@@ -58,3 +58,20 @@ export const SubmitBtn = styled(Button)`
   /* margin: 10px -24px 0;
   padding: 20px 24px; */
 `;
+
+export const TextArea = styled.textarea`
+  background: transparent;
+  display: block;
+  border: 1px solid ${({ theme }) => theme.colors.muted};
+  padding: 8px 16px;
+  outline: none;
+  margin-top: 7px;
+  border-radius: 5px;
+  color: ${({ theme }) => theme.colors.text_100};
+  width: 100%;
+`;
+
+export const ApiMassage = styled.p`
+  text-align: center;
+  color: ${({ isErr }) => (isErr ? "#f61717" : "#21c153")};
+`;

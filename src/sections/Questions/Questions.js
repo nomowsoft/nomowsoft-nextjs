@@ -10,7 +10,7 @@ import {
   ItemsBox,
 } from "./Questions.styles";
 
-const Questions = () => {
+const Questions = ({ questions }) => {
   const [open, setOpen] = React.useState(null);
 
   return (
@@ -18,7 +18,7 @@ const Questions = () => {
       <QuestionsContainer>
         <QuestionsTitle>Recommended Questions</QuestionsTitle>
         <ItemsBox animate>
-          {[...Array(7).keys()].map((i) => (
+          {questions.map((i) => (
             <Item key={i} active={open === i}>
               <div
                 className="title-box"

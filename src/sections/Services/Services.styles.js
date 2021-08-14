@@ -50,11 +50,16 @@ export const ListBox = styled(Slider)`
     right: ${({ theme }) => (theme.isRtl ? "calc(100% - 25px)" : "auto")};
     left: ${({ theme }) => (theme.isRtl ? "auto" : "calc(100% - 62px)")};
   }
+  & .slick-slide > div {
+    margin-inline-end: 5px;
+  }
   & .list-item {
     padding: 20px 24px;
     border-radius: 6px;
     background: ${({ theme }) => theme.colors.bg_100};
-    margin-inline-end: 5px;
+    display: flex !important;
+    justify-content: space-between;
+    flex-direction: column;
     & .item-title {
       font-size: 14px;
       margin: 10px 0;
@@ -67,6 +72,10 @@ export const ListBox = styled(Slider)`
       line-height: 20px;
       opacity: 0.4;
       text-transform: capitalize;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     & .dot {
       width: 25px;
@@ -92,11 +101,17 @@ export const ListBox = styled(Slider)`
     background-position: center;
     z-index: 0;
   }
+  @media ${devices.lg} {
+    & .list-item {
+      height: 300px;
+    }
+  }
   @media ${devices.xxl} {
     margin-top: 50px;
     & .list-item {
       padding-top: 30px;
       margin-inline-end: 15px;
+      height: 360px;
       & .item-title {
         font-size: 20px;
         margin: 25px 0 15px;
@@ -112,6 +127,8 @@ export const ListBox = styled(Slider)`
     & .list-item {
       margin-inline-end: 20px;
       padding-top: 40px;
+      height: 470px;
+
       & .item-title {
         font-size: 26px;
         margin: 30px 0;

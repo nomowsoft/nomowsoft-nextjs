@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import { Header, Footer } from "../molecules";
 
 const PageTemplate = (props) => {
-  const { children, title } = props;
+  const { children, title, data } = props;
+
   return (
     <>
       <Head>
@@ -14,7 +15,7 @@ const PageTemplate = (props) => {
       </Head>
       <Header />
       <main>{children && children}</main>
-      <Footer />
+      <Footer data={data} />
     </>
   );
 };

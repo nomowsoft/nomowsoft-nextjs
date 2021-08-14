@@ -69,9 +69,8 @@ export const ListItems = styled.div`
       display: block;
       width: 80px;
       height: 80px;
-      border-radius: 50%;
-      border: 1px solid #ddd;
       margin: auto;
+      position: relative;
     }
     & .text {
       display: block;

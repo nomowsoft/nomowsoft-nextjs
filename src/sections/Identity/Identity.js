@@ -9,7 +9,7 @@ import {
   IdentityIconBox,
 } from "./Identity.styles";
 
-const Identity = () => {
+const Identity = ({ about_us }) => {
   const i18n = useTranslation();
 
   return (
@@ -27,11 +27,7 @@ const Identity = () => {
             <span style={{ color: "#e66b27" }}>{i18n.t("common:soft")}</span>
           </span>
         </IdentityTitle>
-        <Description>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry is standard dummy text
-          ever{" "}
-        </Description>
+        <Description>{about_us}</Description>
       </InfoSection>
     </IdentityContainer>
   );

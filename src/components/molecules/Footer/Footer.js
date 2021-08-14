@@ -14,14 +14,16 @@ import { whatsapp } from "react-icons-kit/fa/whatsapp";
 import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
 import { mail } from "react-icons-kit/feather/mail";
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 
-const Footer = () => {
+const Footer = ({ data }) => {
   const i18n = useTranslation();
   return (
     <React.Fragment>
       <FooterContainer>
         <FooterBox>
           <Section>
+            <Image src="/assets/logo.svg" width="40px" height="40px" alt="" />
             <h4>
               nomow <span>soft</span>
             </h4>
@@ -53,10 +55,18 @@ const Footer = () => {
             <h4>{i18n.t("common:contact_us")}</h4>
             <li>
               <div style={{ display: "flex" }}>
-                <Icon size={25} icon={facebookSquare} />
-                <Icon size={25} icon={linkedinSquare} />
-                <Icon size={25} icon={twitterSquare} />
-                <Icon size={25} icon={whatsapp} />
+                <a href={data.facebook} target="_blank" rel="noreferrer">
+                  <Icon size={25} icon={facebookSquare} />
+                </a>
+                <a href={data.linkedin} target="_blank" rel="noreferrer">
+                  <Icon size={25} icon={linkedinSquare} />
+                </a>
+                <a href={data.twitter} target="_blank" rel="noreferrer">
+                  <Icon size={25} icon={twitterSquare} />
+                </a>
+                <a href={data.whatsapp} target="_blank" rel="noreferrer">
+                  <Icon size={25} icon={whatsapp} />
+                </a>
               </div>
             </li>
             <li>

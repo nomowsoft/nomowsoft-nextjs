@@ -1,14 +1,15 @@
+import React from "react";
 import { motion } from "framer-motion";
 import useTranslation from "next-translate/useTranslation";
-import React from "react";
 import {
   ClientContainer,
   ClientBox,
   ClientTitle,
   BoxSlider,
 } from "./Clients.styles";
+import Image from "next/image";
 
-const Clients = () => {
+const Clients = ({ clients }) => {
   const i18n = useTranslation();
   return (
     <ClientBox id="clients">
@@ -21,16 +22,28 @@ const Clients = () => {
             transition={{ duration: 20, ease: "linear", repeat: 200 }}
           >
             <div className="box-clone-list">
-              {[...Array(6).keys()].map((i) => (
+              {clients?.map((item, i) => (
                 <div key={i} className="box-icon">
-                  icon {i}
+                  <Image
+                    src={item.icon}
+                    // width="40px"
+                    // height="40px"
+                    alt=""
+                    layout="fill"
+                  />
                 </div>
               ))}
             </div>
             <div className="box-clone-list">
-              {[...Array(6).keys()].map((i) => (
+              {clients?.map((item, i) => (
                 <div key={i} className="box-icon">
-                  icon {6 - i}
+                 <Image
+                    src={item.icon}
+                    // width="40px"
+                    // height="40px"
+                    alt=""
+                    layout="fill"
+                  />
                 </div>
               ))}
             </div>

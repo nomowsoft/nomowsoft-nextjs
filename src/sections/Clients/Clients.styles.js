@@ -44,12 +44,12 @@ export const BoxSlider = styled.div`
   & .box-icon {
     width: 150px;
     height: 100px;
-    background: #ddd;
     margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    position: relative;
   }
   & .box-clone-list {
     display: flex;

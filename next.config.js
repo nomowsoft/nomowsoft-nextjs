@@ -5,5 +5,8 @@ module.exports = {
   eslint: {
     dirs: ["/src"],
   },
+  images: {
+    domains: ["api.nomowsoft.com"],
+  },
   ...nextTranslate(),
 };

@@ -8,7 +8,7 @@ import {
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
-const About = () => {
+const About = ({ feedbacks }) => {
   const i18n = useTranslation();
   return (
     <AboutBox id="about_us">
@@ -16,25 +16,27 @@ const About = () => {
         <AboutTitle>{i18n.t("common:about_us")}</AboutTitle>
         {/* <TitleBorder src={iii} /> */}
         <ListItems>
-          {[...Array(6).keys()].map((i) => (
+          {feedbacks?.map((feed, i) => (
             <div className="item" key={i}>
-              <div className="img" />
-              <p className="text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry is standard dummy
-                text
-              </p>
+              <div className="img">
+                <Image
+                  src="/assets/logo.svg"
+                  layout="fill"
+                  alt="imag"
+                />
+              </div>
+              <p className="text">{feed.about_us}</p>
               <div className="user-box">
                 <Image
-                  src="/assets/Banner.png"
+                  src={feed.icon}
                   height="60px"
                   width="60px"
                   alt="imag"
                   className="user-image"
                 />
                 <div className="user-info">
-                  <h3>Ahmed Zaki</h3>
-                  <p>Back-end Developer</p>
+                  <h3>{feed.name}</h3>
+                  <p>{feed.jobe_title}</p>
                 </div>
               </div>
             </div>
