@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 // import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
 import {
   StartFormContainer,
   StartFormBox,
@@ -15,17 +16,18 @@ import {
 } from "./StartForm.styles";
 
 const StartForm = () => {
+  const i18n = useTranslation();
   const { locale } = useRouter();
   const [state, setState] = React.useState({});
   const [apiMsg, setApiMsg] = React.useState({});
-  const [fetching, setfetching] = React.useState(false);
+  const [fetching, setFetching] = React.useState(false);
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setfetching(true);
+    setFetching(true);
     const service_request = {
       description: state.description,
       requester_name: `${state.first_name} ${state.last_name}`,
@@ -61,7 +63,7 @@ const StartForm = () => {
           type: "error",
         });
       })
-      .finally(() => setfetching(false));
+      .finally(() => setFetching(false));
   };
 
   return (
@@ -81,7 +83,7 @@ const StartForm = () => {
         </ApiMassage>
         <Form onSubmit={handleSubmit}>
           <Label>
-            first name
+            {i18n.t("common:first_name")}
             <TextInput
               name="first_name"
               value={state.first_name}
@@ -90,7 +92,7 @@ const StartForm = () => {
             />
           </Label>
           <Label>
-            last name
+            {i18n.t("common:last_name")}
             <TextInput
               name="last_name"
               value={state.last_name}
@@ -99,7 +101,7 @@ const StartForm = () => {
             />
           </Label>
           <Label col={2}>
-            email
+            {i18n.t("common:email")}
             <TextInput
               name="email"
               value={state.email}
@@ -109,7 +111,7 @@ const StartForm = () => {
             />
           </Label>
           <Label col={2}>
-            phone number
+            {i18n.t("common:mobile")}
             <TextInput
               name="mobile"
               value={state.phone_number}
@@ -119,7 +121,7 @@ const StartForm = () => {
             />
           </Label>
           <Label col={2}>
-            description
+            {i18n.t("common:description")}
             <TextArea
               name="description"
               value={state.phone_number}

@@ -23,5 +23,10 @@
   "request_service": "طلب الخدمة",
   "we_make": "نصنع",
   "make_easer": "تسهّل حياتك",
+  "description": "الوصف",
+  "mobile": "الجوال",
+  "email": "الايميل",
+  "last_name": "اسم العائلة",
+  "first_name": "الاسم الأول",
   "all_rights_reserved": "جميع الحقوق محفوظة لدى شركة"
 }

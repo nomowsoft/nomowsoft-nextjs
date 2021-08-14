@@ -23,6 +23,11 @@
   "products": "Products",
   "web_sites": "Web  Sites",
   "Application": "Applications",
+  "description": "Description",
+  "mobile": "Mobile",
+  "email": "Email",
+  "last_name": "Last Name",
+  "first_name": "First Name",
   "all_rights_reserved": "All rights reserved to nomow company"
 
 }
