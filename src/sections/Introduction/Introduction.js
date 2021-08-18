@@ -45,33 +45,34 @@ const Introduction = () => {
       <MainTitle>
         {i18n.t("common:we_make")}
         <AnimatePresence>
-          {wordsList.map(
-            (word, i) =>
-              active === i && (
-                <SplitLetters
-                  key={i}
-                  initial={{ y: "100%", opacity: 0 }}
-                  animate="visible"
-                  exit="exit"
-                  variants={variant}
-                  isWord={theme.isRtl}
-                >
-                  {i18n.t(`common:${word}`)}
-                </SplitLetters>
-              )
-          )}
+          <span className="animated-box">
+            {wordsList.map(
+              (word, i) =>
+                active === i && (
+                  <SplitLetters
+                    key={i}
+                    initial={{ y: "100%", opacity: 0 }}
+                    animate="visible"
+                    exit="exit"
+                    variants={variant}
+                    isWord={theme.isRtl}
+                  >
+                    {i18n.t(`common:${word}`)}
+                  </SplitLetters>
+                )
+            )}
+          </span>
         </AnimatePresence>
         <br />
         {i18n.t("common:make_easer")}
       </MainTitle>
-      <div>
+      <div className="image-box">
         <Image
           src="/assets/header_pic.svg"
           layout="fill"
           alt=""
           className="header-image"
         />
-
       </div>
       {/* <div className="icon-box">
       </div> */}

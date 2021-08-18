@@ -16,7 +16,7 @@
     "camelcase": "off",
     "consistent-return": "off",
     "array-callback-return": "off",
-    "prettier/prettier": "warn",
+    "prettier/prettier": "error",
     "eslint-disable-next-line": "off",
     "import/no-unresolved": "off",
     "import/extensions": "off",

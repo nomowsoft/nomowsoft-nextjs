@@ -80,6 +80,15 @@ const Footer = ({ data }) => {
       </FooterContainer>
       <PrivacySection>
         <span>{i18n.t("common:all_rights_reserved")}</span>
+        <div style={{ margin: "0 5px" }}>
+          <Image
+            src="/assets/logo_dark.svg"
+            width="25px"
+            height="25px"
+            alt=""
+          />
+        </div>
+        <span style={{ fontSize: 11 }}>@ 2021</span>
       </PrivacySection>
     </React.Fragment>
   );

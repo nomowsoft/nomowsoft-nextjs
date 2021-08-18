@@ -1,7 +1,7 @@
 {
   "home": "Home",
   "blog": "Blog",
-  "start_demo": "Start a Demo",
+  "start_demo": "Start your project",
   "who_we_are": "Who we are",
   "clients": "Clients",
   "about_us": "About us",
@@ -28,6 +28,6 @@
   "email": "Email",
   "last_name": "Last Name",
   "first_name": "First Name",
-  "all_rights_reserved": "All rights reserved to nomow company"
+  "all_rights_reserved": "All rights reserved to"
 
 }
