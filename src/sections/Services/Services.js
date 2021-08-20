@@ -24,7 +24,7 @@ const Services = ({ services }) => {
         <ListBox {...sliderSettings} rtl={theme.isRtl}>
           {services?.map((service, i) => (
             <div className="list-item" key={i}>
-              <div>
+              <div dir={theme.isRtl ? "rtl" : "ltr"}>
                 <span className="dot" />
                 <h6 className="item-title">{service.title}</h6>
                 <p className="item-text" title={service.description}>

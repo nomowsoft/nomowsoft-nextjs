@@ -9,11 +9,9 @@ export const IntroContainer = styled(motion.div)`
   padding: 20px 10px;
   padding-top: 100px;
   position: relative;
-  /* background-image: url("/assets/header_pic.svg"); */
   & .header-image {
-    /* display: none !important; */
     display: none;
-    min-width: 50% !important;
+    min-width: 100% !important;
     height: 100% !important;
     right: ${({ theme }) => (theme.isRtl ? "auto" : "0px")} !important;
     left: ${({ theme }) => (theme.isRtl ? "-10px" : "auto")} !important;
@@ -37,27 +35,62 @@ export const IntroContainer = styled(motion.div)`
     padding-top: 100px;
   }
   @media ${devices.lg} {
-    min-height: 50vh;
+    /* min-height: 50vh; */
+    padding: 120px 10px;
     align-items: center;
     & .image-box {
       display: flex;
     }
+    & .header-image {
+      min-width: 60% !important;
+      min-height: 100% !important;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: ${({ theme }) => theme.colors.linear_50};
+      z-index: 4;
+      width: 100%;
+      height: 150px;
+    }
   }
   @media ${devices.xl} {
-    padding: 25px;
-    padding-top: 120px;
+    padding: 120px 25px;
+    &::before {
+      height: 150px;
+      bottom: 0;
+    }
+    & .header-image {
+      min-width: 50% !important;
+      min-height: 110% !important;
+    }
   }
   @media ${devices.xxl} {
     padding: 28px;
     padding-top: 80px;
     min-height: 100vh;
-    & .image-box {
-      width: 150%;
-      height: 112%;
+    & .header-image {
+      top: 30px !important;
+      min-width: 70% !important;
+      min-height: 100% !important;
+    }
+    &::before {
+      height: 180px;
+      bottom: 0;
     }
   }
   @media ${devices.xxxl} {
     padding: 28px 25px;
+    & .header-image {
+      top: 40px !important;
+    }
+    &::before {
+      height: 180px;
+      bottom: 50px;
+    }
   }
 `;
 
