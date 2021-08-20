@@ -31,6 +31,8 @@ const light = {
     text_100: "#808080",
     shadow: "rgba(151, 151, 151, 0.16)",
     linear: "linear-gradient(to bottom, #fff -11%, #fcfaff)",
+    linear_50:
+      "linear-gradient(180deg,rgba(2,0,36,0) 0%,rgba(255,255,255,0.47102591036414565) 16%,rgba(255,255,255,1) 100% )",
   },
 };
 
@@ -46,11 +48,12 @@ const dark = {
     text_100: "#fff",
     shadow: "#2c3e50",
     linear: "linear-gradient(to bottom, #2c3e50 -11%, #263748)",
+    linear_50:
+      "linear-gradient(180deg,rgba(2,0,36,0) 0%,rgb(45 62 80 / 53%) 16%,rgb(45 62 80 / 94%) 100% )",
   },
 };
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap');
   * {
     box-sizing: border-box;
   }

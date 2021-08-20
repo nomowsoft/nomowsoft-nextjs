@@ -19,11 +19,7 @@ const About = ({ feedbacks }) => {
           {feedbacks?.map((feed, i) => (
             <div className="item" key={i}>
               <div className="img">
-                <Image
-                  src="/assets/logo.svg"
-                  layout="fill"
-                  alt="imag"
-                />
+                <Image src="/assets/logo.svg" layout="fill" alt="imag" />
               </div>
               <p className="text">{feed.about_us}</p>
               <div className="user-box">
