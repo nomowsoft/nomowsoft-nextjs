@@ -44,12 +44,9 @@ const Footer = ({ data }) => {
           </Section>
           <Section>
             <h4>{i18n.t("common:services")}</h4>
-            <li>{i18n.t("common:Website_design")}</li>
-            <li>{i18n.t("common:publicity_advertisement")}</li>
-            <li>{i18n.t("common:marketing")}</li>
-            <li>{i18n.t("common:social_media")}</li>
-            <li>{i18n.t("common:project_management")}</li>
-            <li>{i18n.t("common:data_analysis")}</li>
+            {data?.services?.map((service, i) => (
+              <li key={i}>{service.title}</li>
+            ))}
           </Section>
           <Section>
             <h4>{i18n.t("common:contact_us")}</h4>
