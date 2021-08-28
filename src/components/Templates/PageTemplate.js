@@ -4,6 +4,7 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import { Header, Footer } from "../molecules";
 import styled from "styled-components";
+import FloatingMenu from "../molecules/floatingMenu";
 
 const PageTemplate = (props) => {
   const { children, title, data } = props;
@@ -23,6 +24,7 @@ const PageTemplate = (props) => {
       </Head>
       <Header />
       <main>{children && children}</main>
+      <FloatingMenu data={data} />
       <Footer data={data} />
     </Container>
   );

@@ -12,18 +12,18 @@ export const ServicesContainer = styled.div`
   background: ${({ theme }) => theme.colors.linear};
   padding-bottom: 20px;
   padding-top: 20px;
-  margin: 20px auto;
+  margin: 10px auto;
   @media ${devices.lg} {
-    margin: 40px auto 0;
+    margin: 20px auto 0;
   }
   @media ${devices.xl} {
-    margin: 60px auto 0;
+    margin: 30px auto 0;
   }
   @media ${devices.xxl} {
-    margin: 80px auto 0;
+    margin: 40px auto 0;
   }
   @media ${devices.xxxl} {
-    margin: 100px auto 0;
+    margin: 50px auto 0;
   }
 `;
 
@@ -32,7 +32,7 @@ export const ServicesBox = styled(SharedContainer)`
 `;
 
 export const ServicesTitle = styled(SharedTitle)`
-  margin-top: 40px;
+  margin-top: 20px;
 `;
 
 export const ListBox = styled(Slider)`

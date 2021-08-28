@@ -12,7 +12,7 @@ function Question({ data }) {
 
 export default Question;
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   const res = await fetch(
     `https://nomowsoft.herokuapp.com/v1/frequently_questions?locale=${locale}`
   ).then((response) => response.json());

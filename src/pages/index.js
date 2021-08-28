@@ -13,7 +13,7 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   const res = await fetch(
     `https://nomowsoft.herokuapp.com/v1/companies/1?locale=${locale}`
   ).then((response) => response.json());

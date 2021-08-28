@@ -38,7 +38,7 @@ export const SharedTitle = styled.h4`
 export const IdentityContainer = styled(SharedContainer)`
   display: flex;
   justify-content: space-between;
-  margin: 50px auto 0;
+  margin: 20px auto 0;
   @media ${devices.lg} {
     align-items: flex-end;
     justify-content: space-evenly;

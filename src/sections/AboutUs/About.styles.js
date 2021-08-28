@@ -19,20 +19,20 @@ export const AboutTitle = styled(SharedTitle)`
 
 export const AboutContainer = styled(SharedContainer)`
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   padding-top: 20px;
 
   @media ${devices.lg} {
-    margin: 40px auto 0;
+    margin: 20px auto 0;
   }
   @media ${devices.xl} {
-    margin: 50px auto 0;
+    margin: 20px auto 0;
   }
   @media ${devices.xxl} {
-    margin: 60px auto 0;
+    margin: 30px auto 0;
   }
   @media ${devices.xxxl} {
-    margin: 90px auto 0;
+    margin: 40px auto 0;
   }
 `;
 
