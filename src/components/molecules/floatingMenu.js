@@ -22,7 +22,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #44c042;
+  color: #fff;
+  background: ${({ theme }) => theme.colors.primary};
   padding: 5px;
 `;
 
