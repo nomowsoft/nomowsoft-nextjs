@@ -3,9 +3,4 @@ import Footer from "./Footer";
 import ColorModeSwitch from "./ColorModeSwitch";
 import LangSwitcher from "./LangSwitch";
 
-export {
-  Header,
-  Footer,
-  ColorModeSwitch,
-  LangSwitcher,
-};
+export { Header, Footer, ColorModeSwitch, LangSwitcher };
