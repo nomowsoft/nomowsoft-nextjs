@@ -21,7 +21,6 @@ const Identity = ({ about_us }) => {
       </IdentityIconBox>
       <InfoSection>
         <IdentityTitle>
-          {i18n.t("common:who")}{" "}
           <span style={{ color: "#217371" }}>
             {i18n.t("common:nomow")}{" "}
             <span style={{ color: "#e66b27" }}>{i18n.t("common:soft")}</span>
