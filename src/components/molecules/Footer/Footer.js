@@ -52,16 +52,16 @@ const Footer = ({ data }) => {
             <h4>{i18n.t("common:contact_us")}</h4>
             <li>
               <div style={{ display: "flex" }}>
-                <a href={data.facebook} target="_blank" rel="noreferrer">
+                <a href="#" target="_blank" rel="noreferrer">
                   <Icon size={25} icon={facebookSquare} />
                 </a>
-                <a href={data.linkedin} target="_blank" rel="noreferrer">
+                <a href="#" target="_blank" rel="noreferrer">
                   <Icon size={25} icon={linkedinSquare} />
                 </a>
-                <a href={data.twitter} target="_blank" rel="noreferrer">
+                <a href="#" target="_blank" rel="noreferrer">
                   <Icon size={25} icon={twitterSquare} />
                 </a>
-                <a href={data.whatsapp} target="_blank" rel="noreferrer">
+                <a href="#" target="_blank" rel="noreferrer">
                   <Icon size={25} icon={whatsapp} />
                 </a>
               </div>

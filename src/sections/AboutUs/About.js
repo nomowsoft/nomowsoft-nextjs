@@ -8,6 +8,13 @@ import {
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
+import { Icon } from "react-icons-kit";
+import { twitterSquare } from "react-icons-kit/fa/twitterSquare";
+import { facebookSquare } from "react-icons-kit/fa/facebookSquare";
+import { whatsapp } from "react-icons-kit/fa/whatsapp";
+import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
+import { mail } from "react-icons-kit/feather/mail";
+
 const About = ({ feedbacks }) => {
   const i18n = useTranslation();
   return (
@@ -21,18 +28,18 @@ const About = ({ feedbacks }) => {
               <div className="img">
                 <Image src="/assets/logo.svg" layout="fill" alt="imag" />
               </div>
-              <p className="text">{feed.about_us}</p>
+              <p className="text">{feed.content}</p>
               <div className="user-box">
-                <Image
+                <img
                   src={feed.icon}
-                  height="60px"
-                  width="60px"
+                  height="80px"
+                  width="80px"
                   alt="imag"
                   className="user-image"
                 />
                 <div className="user-info">
                   <h3>{feed.name}</h3>
-                  <p>{feed.jobe_title}</p>
+                  <p>{feed.job_title}</p>
                 </div>
               </div>
             </div>

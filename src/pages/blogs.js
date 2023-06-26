@@ -1,22 +1,21 @@
 import PageTemplate from "components/Templates/PageTemplate";
 import { ComingSoon } from "sections";
 
+export const getStaticProps = async () => {
+  const res =  await fetch("https://hr.nomowsoft.com/web/about_us?lang=00_ar")
+  const data = await res.json();
+  return {
+    props: {
+      posts: data,
+    },
+  }
+}
+
+
 export default function Blogs({ data }) {
   return (
-    <PageTemplate title="Blogs" data={data.company}>
+    <PageTemplate title="Blogs" data={data}>
       <ComingSoon />
     </PageTemplate>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  const res = await fetch(
-    `https://nomowsoft.herokuapp.com/v1/companies/1?locale=${locale}`
-  ).then((response) => response.json());
-
-  return {
-    props: {
-      data: res.data,
-    },
-  };
 }
