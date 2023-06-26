@@ -77,7 +77,8 @@ export const ListItems = styled.div`
       margin-top: 40px;
       line-height: 24px;
       font-size: 15px;
-      opacity: 0.4;
+      opacity: 20;
+      text-align: justify;
       color: ${({ theme }) => theme.colors.text_100};
     }
     & .user-box {
@@ -96,6 +97,7 @@ export const ListItems = styled.div`
         & p {
           margin: 0;
           font-size: 13px;
+          text-align: justify;
         }
       }
     }

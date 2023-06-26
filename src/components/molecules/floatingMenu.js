@@ -6,7 +6,7 @@ import { whatsapp } from "react-icons-kit/fa/whatsapp";
 const FloatingMenu = ({ data }) => {
   return (
     <Container>
-      <a href={data.whatsapp} target="_blank" rel="noreferrer">
+      <a target="_blank" rel="noreferrer">
         <Icon size={30} icon={whatsapp} />
       </a>
     </Container>
