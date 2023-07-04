@@ -79,6 +79,7 @@ export const Description = styled(motion.p)`
   font-size: 12px;
   font-weight: 300;
   font-stretch: normal;
+  text-align: justify;
   font-style: normal;
   line-height: 20px;
   letter-spacing: normal;

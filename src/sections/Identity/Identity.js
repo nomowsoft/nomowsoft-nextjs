@@ -26,7 +26,13 @@ const Identity = ({ about_us }) => {
             <span style={{ color: "#e66b27" }}>{i18n.t("common:soft")}</span>
           </span>
         </IdentityTitle>
-        <Description>{about_us}</Description>
+        <Description>
+           {about_us?.map((about) => (
+          <div key={about.id}>
+            {about.content}
+          </div>
+        ))}
+        </Description>
       </InfoSection>
     </IdentityContainer>
   );

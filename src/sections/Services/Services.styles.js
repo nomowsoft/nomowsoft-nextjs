@@ -68,6 +68,7 @@ export const ListBox = styled(Slider)`
     & .item-text {
       color: ${({ theme }) => theme.colors.text_100};
       font-size: 12px;
+      text-align: justify;
       margin: 10px 0;
       line-height: 20px;
       opacity: 0.4;

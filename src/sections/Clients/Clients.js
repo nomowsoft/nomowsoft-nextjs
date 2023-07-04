@@ -24,26 +24,14 @@ const Clients = ({ clients }) => {
             <div className="box-clone-list">
               {clients?.map((item, i) => (
                 <div key={i} className="box-icon">
-                  <Image
+                  <img
                     src={item.icon}
                     // width="40px"
                     // height="40px"
                     alt=""
                     layout="fill"
                   />
-                </div>
-              ))}
-            </div>
-            <div className="box-clone-list">
-              {clients?.map((item, i) => (
-                <div key={i} className="box-icon">
-                  <Image
-                    src={item.icon}
-                    // width="40px"
-                    // height="40px"
-                    alt=""
-                    layout="fill"
-                  />
+                  <h1>{item.name}</h1>
                 </div>
               ))}
             </div>
