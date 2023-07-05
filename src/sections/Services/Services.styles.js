@@ -71,7 +71,7 @@ export const ListBox = styled(Slider)`
       text-align: justify;
       margin: 10px 0;
       line-height: 20px;
-      opacity: 0.4;
+      opacity: 20;
       text-transform: capitalize;
       display: -webkit-box;
       -webkit-line-clamp: 6;

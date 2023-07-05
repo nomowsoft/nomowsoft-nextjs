@@ -28,7 +28,7 @@ const light = {
     muted: "#f8f9fb",
     text: "#000",
     text_50: "#373737",
-    text_100: "#808080",
+    text_100: "#5b5757",
     shadow: "rgba(151, 151, 151, 0.16)",
     linear: "linear-gradient(to bottom, #fff -11%, #fcfaff)",
     linear_50:

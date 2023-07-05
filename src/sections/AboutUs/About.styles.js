@@ -77,6 +77,7 @@ export const ListItems = styled.div`
       margin-top: 40px;
       line-height: 24px;
       font-size: 15px;
+      opacity: 20;
       opacity: 0.4;
       text-align: justify;
       color: ${({ theme }) => theme.colors.text_100};

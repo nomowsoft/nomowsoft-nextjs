@@ -84,7 +84,7 @@ export const Description = styled(motion.p)`
   line-height: 20px;
   letter-spacing: normal;
   color: ${({ theme }) => theme.colors.text_100};
-  opacity: 0.4;
+  opacity: 20;
 
   @media ${devices.lg} {
     font-size: 14px;
