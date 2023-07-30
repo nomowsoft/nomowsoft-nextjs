@@ -28,9 +28,9 @@ const Identity = ({ about_us }) => {
         </IdentityTitle>
         <Description>
            {about_us?.map((about) => (
-          <div key={about.id}>
-            {about.content}
-          </div>
+              <div key={about.id}>
+                {about.content}
+              </div>
         ))}
         </Description>
       </InfoSection>
