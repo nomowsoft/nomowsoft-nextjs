@@ -26,8 +26,8 @@ const Clients = ({ clients }) => {
                 <div key={i} className="box-icon">
                   <img
                     src={item.icon}
-                    // width="40px"
-                    // height="40px"
+                    width="100px"
+                    height="100px"
                     alt=""
                     layout="fill"
                   />

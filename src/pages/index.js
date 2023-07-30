@@ -7,7 +7,7 @@ export const getStaticProps = async ({locale}) => {
     lang = "ar_001"
     console.log(locale)
   }else{
-    lang = "en_001"
+    lang = "en"
   }
   const res_about_us =  await fetch(`https://hr.nomowsoft.com/web/about_us?lang=${lang}`)
   const data_about_us = await res_about_us.json();
