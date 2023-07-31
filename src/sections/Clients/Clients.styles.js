@@ -27,47 +27,59 @@ export const ClientContainer = styled.div`
   }
 `;
 
-export const BoxSlider = styled.div`
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  justify-content: center;
-  position: relative;
-  height: 110px;
-  margin-top: 40px;
-  & .box {
-    display: flex;
-    width: 400%;
-    position: absolute;
-    left: 0;
+export const Slider = styled.div`
+  display: grid;
+  place-item: center;
+  & .slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
   }
-  & .box-icon {
-    width: 150px;
-    height: 100px;
-    margin: 0 10px;
+  & .slider-track{
+    display: flex;
+    animation: scroll 40s linear infinite
+  }
+  & .slide{
+    height: 200px;
+    width: 250px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    position: relative;
+    padding: 15px;
   }
-  & .box-clone-list {
-    display: flex;
-    width: 50%;
-    justify-content: space-evenly;
+  & img{
+    width:100%;
+    transition: transform 1s;
   }
-  @media ${devices.md} {
-    & .box {
-      width: 300%;
+  & img:hover{
+    transform: translate(20px);
+  }
+  & slider::before,
+    slider::after{
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgb(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+  } & slider::before{
+    left: 0;
+    top:0;
+  }
+  } & slider::after{
+    right: 0;
+    top:0;
+    transform: rotateZ(180deg)
+  }
+  @keyframes scroll {
+    0%{
+      transform: translatex(0);
+    }
+    & 100%{
+      transform: translatex(calc(-250px * 9));
     }
   }
-  @media ${devices.lg} {
-    & .box {
-      width: 200%;
-    }
-  }
-  @media ${devices.xxl} {
-    margin: 60px auto;
-    width: 90%;
-  }
-`;
+  `

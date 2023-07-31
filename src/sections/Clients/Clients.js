@@ -5,7 +5,7 @@ import {
   ClientContainer,
   ClientBox,
   ClientTitle,
-  BoxSlider,
+  Slider
 } from "./Clients.styles";
 import Image from "next/image";
 
@@ -15,31 +15,28 @@ const Clients = ({ clients }) => {
     <ClientBox id="clients">
       <ClientContainer>
         <ClientTitle>{i18n.t("common:clients")}</ClientTitle>
-        <BoxSlider>
-          <motion.div
-            className="box"
-            animate={{ x: "-50%" }}
-            transition={{ duration: 20, ease: "linear", repeat: 200 }}
-          >
-            <div className="box-clone-list">
+        <Slider>
+          <div className="slider">
+            <div className="slider-track">
               {clients?.map((item, i) => (
-                <div key={i} className="box-icon">
-                  <img
-                    src={item.icon}
-                    width="100px"
-                    height="100px"
-                    alt=""
-                    layout="fill"
-                  />
-                  <h1>{item.name}</h1>
-                </div>
+                  <div key={i} className="slide">
+                    <img
+                      src={item.icon}
+                      width="100px"
+                      height="100px"
+                      alt=""
+                      layout="fill"
+                    />
+                    <h1>{item.name}</h1>
+                  </div>
               ))}
             </div>
-          </motion.div>
-        </BoxSlider>
+          </div>
+        </Slider>
       </ClientContainer>
     </ClientBox>
   );
 };
+
 
 export default Clients;
