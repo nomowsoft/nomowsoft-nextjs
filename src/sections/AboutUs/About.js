@@ -8,13 +8,6 @@ import {
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
-import { Icon } from "react-icons-kit";
-import { twitterSquare } from "react-icons-kit/fa/twitterSquare";
-import { facebookSquare } from "react-icons-kit/fa/facebookSquare";
-import { whatsapp } from "react-icons-kit/fa/whatsapp";
-import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
-import { mail } from "react-icons-kit/feather/mail";
-
 const About = ({ feedbacks }) => {
   const i18n = useTranslation();
   return (

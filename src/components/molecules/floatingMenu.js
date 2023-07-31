@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Icon } from "react-icons-kit";
 import { whatsapp } from "react-icons-kit/fa/whatsapp";
 
-const FloatingMenu = ({ data }) => {
+const FloatingMenu = () => {
   return (
     <Container>
       <a target="_blank" rel="noreferrer">

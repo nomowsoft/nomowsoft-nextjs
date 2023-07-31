@@ -66,8 +66,4 @@ export const BoxSlider = styled.div`
       width: 200%;
     }
   }
-  @media ${devices.xxl} {
-    margin: 60px auto;
-    width: 90%;
-  }
-`;
+  `;
