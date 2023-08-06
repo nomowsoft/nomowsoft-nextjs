@@ -24,7 +24,7 @@ const Clients = ({ clients }) => {
             <div className="box-clone-list">
               {clients?.map((item, i) => (
                 <div key={i} className="box-icon">
-                  <img
+                  <Image
                     src={item.icon}
                     width="100px"
                     height="100px"

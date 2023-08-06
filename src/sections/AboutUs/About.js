@@ -23,7 +23,7 @@ const About = ({ feedbacks }) => {
               </div>
               <p className="text">{feed.content}</p>
               <div className="user-box">
-                <img
+                <Image
                   src={feed.icon}
                   height="80px"
                   width="80px"
