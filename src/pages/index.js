@@ -9,13 +9,21 @@ export const getStaticProps = async ({locale}) => {
   }else{
     lang = "en"
   }
-  const res_about_us =  await fetch(`https://hr.nomowsoft.com/web/about_us?lang=${lang}`)
+  const res_about_us =  await fetch(`
+      https://hr.nomowsoft.com/web/about_us?lang=${ lang }
+  `)
   const data_about_us = await res_about_us.json();
-  const res_our_services =  await fetch(`https://hr.nomowsoft.com/web/our_services?lang=${lang}`)
+  const res_our_services =  await fetch(`
+      https://hr.nomowsoft.com/web/our_services?lang=${ lang }
+  `)
   const data_our_services = await res_our_services.json();
-  const res_clients =  await fetch(`https://hr.nomowsoft.com/web/clients?lang=${lang}`)
+  const res_clients =  await fetch(`
+      https://hr.nomowsoft.com/web/clients?lang=${ lang }
+  `)
   const data_clients = await res_clients.json();
-  const res_about =  await fetch(`https://hr.nomowsoft.com/web/about_us?lang=${lang}`)
+  const res_about =  await fetch(`
+      https://hr.nomowsoft.com/web/about_us?lang=${ lang }
+  `)
   const data_about = await res_about.json();
   return {
     props: {
