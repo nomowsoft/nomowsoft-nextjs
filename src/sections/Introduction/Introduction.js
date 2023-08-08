@@ -24,7 +24,7 @@ const variant = {
 };
 
 const Introduction = () => {
-  const i18n = useTranslation();
+  const t = useTranslation();
   const theme = React.useContext(ThemeContext);
   const [active, setActive] = React.useState(0);
 
@@ -43,7 +43,7 @@ const Introduction = () => {
   return (
     <IntroContainer>
       <MainTitle>
-        {i18n.t("common:we_make")}
+        {t.t("common:we_make")}
         <AnimatePresence>
           <span className="animated-box">
             {wordsList.map(
@@ -57,14 +57,14 @@ const Introduction = () => {
                     variants={variant}
                     isWord={theme.isRtl}
                   >
-                    {i18n.t(`common:${word}`)}
+                    {t.t(`common:${word}`)}
                   </SplitLetters>
                 )
             )}
           </span>
         </AnimatePresence>
         <br />
-        {i18n.t("common:make_easer")}
+        {t.t("common:make_easer")}
       </MainTitle>
       <div className="image-box">
         <Image

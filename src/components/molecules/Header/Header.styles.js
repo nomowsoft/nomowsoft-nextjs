@@ -26,6 +26,11 @@ export const HeaderBox = styled(motion.header)`
 export const ElementBox = styled.div`
   display: flex;
   align-items: center;
+  & a {
+    color: ${({ active, theme }) =>
+      active ? theme.colors.primary : theme.colors.text_100};
+    text-decoration: none !important;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -106,6 +111,15 @@ export const HeaderLink = styled.span`
         background-color: #e66b27;
       }
     `}
+  & a {
+    color: ${({ active, theme }) =>
+      active ? theme.colors.primary : theme.colors.text_100};
+    text-decoration: none !important;
+  }
+  & a:hover {
+    color: ${({ active, theme }) =>
+      active ? theme.colors.primary : theme.colors.text_100};
+  }
   @media ${devices.sm} {
     font-size: 12px;
     margin: 0 10px;

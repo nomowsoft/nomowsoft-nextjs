@@ -76,6 +76,11 @@ export const Section = styled(motion.div)`
       font-weight: normal;
       font-stretch: normal;
     }
+    & a {
+      color: ${({ active, theme }) =>
+        active ? theme.colors.primary : theme.colors.text_100};
+      text-decoration: none !important;
+    }
   }
   @media ${devices.lg} {
     & h4 {

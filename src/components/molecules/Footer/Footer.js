@@ -15,43 +15,52 @@ import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
 import { mail } from "react-icons-kit/feather/mail";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Footer = ({ data }) => {
-  const i18n = useTranslation();
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+  const t = useTranslation();
   return (
     <React.Fragment>
-      <FooterContainer>
+      <FooterContainer data-aos="zoom-in">
         <FooterBox>
-          <Section>
-            <Image src="/assets/logo.svg" width="40px" height="40px" alt="" />
-            <h4>
+          <Section data-aos="zoom-in">
+            <Image src="/assets/logo.svg" width={40} height={40} alt="" />
+            <h4 data-aos="zoom-in">
               nomow <span>soft</span>
             </h4>
             <li>
-              <Link href="/#who_we_are">{i18n.t("common:who_we_are")}</Link>
+              <Link href="/#who_we_are">{t.t("common:who_we_are")}</Link>
             </li>
             <li>
-              <Link href="/#clients">{i18n.t("common:clients")}</Link>
+              <Link href="/#clients">{t.t("common:clients")}</Link>
             </li>
             <li>
-              <Link href="/#about_us">{i18n.t("common:about_us")}</Link>
+              <Link href="/#about_us">{t.t("common:about_us")}</Link>
             </li>
             <li>
               <Link href="/recommended_questions">
-                {i18n.t("common:frequently_questions")}
+                {t.t("common:frequently_questions")}
               </Link>
             </li>
           </Section>
           <Section>
-            <h4>{i18n.t("common:services")}</h4>
+            <h4>{t.t("common:services")}</h4>
             {data?.services?.map((service, i) => (
               <li key={i}>{service.title}</li>
             ))}
           </Section>
           <Section>
-            <h4>{i18n.t("common:contact_us")}</h4>
+            <h4>{t.t("common:contact_us")}</h4>
             <li>
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex" }} data-aos="zoom-in">
                 <a href="#" target="_blank" rel="noreferrer">
                   <Icon size={25} icon={facebookSquare} />
                 </a>
@@ -76,14 +85,9 @@ const Footer = ({ data }) => {
         </FooterBox>
       </FooterContainer>
       <PrivacySection>
-        <span>{i18n.t("common:all_rights_reserved")}</span>
+        <span>{t.t("common:all_rights_reserved")}</span>
         <div style={{ margin: "0 5px" }}>
-          <Image
-            src="/assets/logo_dark.svg"
-            width="25px"
-            height="25px"
-            alt=""
-          />
+          <Image src="/assets/logo_dark.svg" width={25} height={25} alt="" />
         </div>
         <span style={{ fontSize: 11 }}>@ 2021</span>
       </PrivacySection>
