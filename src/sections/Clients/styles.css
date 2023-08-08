@@ -1,0 +1,11 @@
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #e66b27 !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px !important;
+}
+
+.swiper-slide{
+    text-align: center !important;
+}

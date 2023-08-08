@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Icon } from "react-icons-kit";
 import { whatsapp } from "react-icons-kit/fa/whatsapp";
 
-const FloatingMenu = ({ data }) => {
+const FloatingMenu = ({ link_whatsapp }) => {
   return (
     <Container>
-      <a target="_blank" rel="noreferrer">
+      <a href={link_whatsapp} target="_blank" rel="noreferrer">
         <Icon size={30} icon={whatsapp} />
       </a>
     </Container>
@@ -25,6 +25,12 @@ const Container = styled.div`
   color: #fff;
   background: ${({ theme }) => theme.colors.primary};
   padding: 5px;
+  & a {
+    color: #ffff;
+    &:hover {
+      color: #ddd;
+    }
+  }
 `;
 
 export default FloatingMenu;

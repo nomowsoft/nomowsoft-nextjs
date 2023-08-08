@@ -8,31 +8,33 @@ import {
   InfoSection,
   IdentityIconBox,
 } from "./Identity.styles";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Identity = ({ about_us }) => {
-  const i18n = useTranslation();
-
+  const t = useTranslation();
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
   return (
     <IdentityContainer id="who_we_are">
-      <IdentityIconBox>
+      <IdentityIconBox data-aos="zoom-in">
         <div style={{ position: "relative", width: "80%", height: "80%" }}>
           <Image src="/assets/logo.svg" layout="fill" alt="" />
         </div>
       </IdentityIconBox>
       <InfoSection>
-        <IdentityTitle>
+        <IdentityTitle data-aos="zoom-in">
           <span style={{ color: "#217371" }}>
-            {i18n.t("common:nomow")}{" "}
-            <span style={{ color: "#e66b27" }}>{i18n.t("common:soft")}</span>
+            {t.t("common:nomow")}{" "}
+            <span style={{ color: "#e66b27" }}>{t.t("common:soft")}</span>
           </span>
         </IdentityTitle>
-        <Description>
-           {about_us?.map((about) => (
-              <div key={about.id}>
-                {about.content}
-              </div>
-        ))}
-        </Description>
+        <Description data-aos="fade-up">{about_us[0].content}</Description>
       </InfoSection>
     </IdentityContainer>
   );

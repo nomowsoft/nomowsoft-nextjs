@@ -5,6 +5,10 @@ import {
   FooterBox,
   Section,
   PrivacySection,
+  LinkFacebook,
+  LinkWhatsapp,
+  LinkTwitter,
+  LinkLinkedin,
 } from "./Footer.styles";
 // icons
 import { Icon } from "react-icons-kit";
@@ -15,77 +19,92 @@ import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
 import { mail } from "react-icons-kit/feather/mail";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const Footer = ({ data }) => {
-  const i18n = useTranslation();
+const Footer = ({
+  facebook,
+  linkedin,
+  whatsapps,
+  twitter,
+  email,
+  services,
+}) => {
+  console.log(facebook);
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+  const t = useTranslation();
+  const currentYear = new Date().getFullYear();
   return (
     <React.Fragment>
-      <FooterContainer>
+      <FooterContainer data-aos="zoom-in">
         <FooterBox>
-          <Section>
-            <Image src="/assets/logo.svg" width="40px" height="40px" alt="" />
-            <h4>
+          <Section data-aos="zoom-in">
+            <Image src="/assets/logo.svg" width={40} height={40} alt="" />
+            <h4 data-aos="zoom-in">
               nomow <span>soft</span>
             </h4>
             <li>
-              <Link href="/#who_we_are">{i18n.t("common:who_we_are")}</Link>
+              <Link href="/#who_we_are">{t.t("common:who_we_are")}</Link>
             </li>
             <li>
-              <Link href="/#clients">{i18n.t("common:clients")}</Link>
+              <Link href="/#clients">{t.t("common:clients")}</Link>
             </li>
             <li>
-              <Link href="/#about_us">{i18n.t("common:about_us")}</Link>
+              <Link href="/#about_us">{t.t("common:about_us")}</Link>
             </li>
             <li>
               <Link href="/recommended_questions">
-                {i18n.t("common:frequently_questions")}
+                {t.t("common:frequently_questions")}
               </Link>
             </li>
           </Section>
           <Section>
-            <h4>{i18n.t("common:services")}</h4>
-            {data?.services?.map((service, i) => (
-              <li key={i}>{service.title}</li>
+            <h4>{t.t("common:services")}</h4>
+            {services?.map((service, i) => (
+              <li key={i} className="service">
+                {service.title}
+              </li>
             ))}
           </Section>
           <Section>
-            <h4>{i18n.t("common:contact_us")}</h4>
+            <h4>{t.t("common:contact_us")}</h4>
             <li>
-              <div style={{ display: "flex" }}>
-                <a href="#" target="_blank" rel="noreferrer">
+              <div style={{ display: "flex" }} data-aos="zoom-in">
+                <LinkFacebook href={facebook} target="_blank" rel="noreferrer">
                   <Icon size={25} icon={facebookSquare} />
-                </a>
-                <a href="#" target="_blank" rel="noreferrer">
+                </LinkFacebook>
+                <LinkLinkedin href={linkedin} target="_blank" rel="noreferrer">
                   <Icon size={25} icon={linkedinSquare} />
-                </a>
-                <a href="#" target="_blank" rel="noreferrer">
+                </LinkLinkedin>
+                <LinkTwitter href={twitter} target="_blank" rel="noreferrer">
                   <Icon size={25} icon={twitterSquare} />
-                </a>
-                <a href="#" target="_blank" rel="noreferrer">
+                </LinkTwitter>
+                <LinkWhatsapp href={whatsapp} target="_blank" rel="noreferrer">
                   <Icon size={25} icon={whatsapp} />
-                </a>
+                </LinkWhatsapp>
               </div>
             </li>
             <li>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Icon size={25} icon={mail} />
-                <span className="email">info@nomowsoft.com</span>
+                <span className="email">{email}</span>
               </div>
             </li>
           </Section>
         </FooterBox>
       </FooterContainer>
       <PrivacySection>
-        <span>{i18n.t("common:all_rights_reserved")}</span>
+        <span>{t.t("common:all_rights_reserved")}</span>
         <div style={{ margin: "0 5px" }}>
-          <Image
-            src="/assets/logo_dark.svg"
-            width="25px"
-            height="25px"
-            alt=""
-          />
+          <Image src="/assets/logo_dark.svg" width={25} height={25} alt="" />
         </div>
-        <span style={{ fontSize: 11 }}>@ 2021</span>
+        <span style={{ fontSize: 11 }}>@ {currentYear}</span>
       </PrivacySection>
     </React.Fragment>
   );

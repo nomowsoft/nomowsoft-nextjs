@@ -7,22 +7,24 @@ import {
 } from "./About.styles";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
-
-import { Icon } from "react-icons-kit";
-import { twitterSquare } from "react-icons-kit/fa/twitterSquare";
-import { facebookSquare } from "react-icons-kit/fa/facebookSquare";
-import { whatsapp } from "react-icons-kit/fa/whatsapp";
-import { linkedinSquare } from "react-icons-kit/fa/linkedinSquare";
-import { mail } from "react-icons-kit/feather/mail";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = ({ feedbacks }) => {
-  const i18n = useTranslation();
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+  const t = useTranslation();
   return (
     <AboutBox id="about_us">
       <AboutContainer>
-        <AboutTitle>{i18n.t("common:about_us")}</AboutTitle>
+        <AboutTitle data-aos="zoom-in">{t.t("common:about_us")}</AboutTitle>
         {/* <TitleBorder src={iii} /> */}
-        <ListItems>
+        <ListItems data-aos="zoom-in">
           {feedbacks?.map((feed, i) => (
             <div className="item" key={i}>
               <div className="img">
@@ -30,12 +32,12 @@ const About = ({ feedbacks }) => {
               </div>
               <p className="text">{feed.content}</p>
               <div className="user-box">
-                <img
+                <Image
                   src={feed.icon}
-                  height="80px"
-                  width="80px"
+                  height={200}
+                  width={200}
                   alt="imag"
-                  className="user-image"
+                  // className="user-image"
                 />
                 <div className="user-info">
                   <h3>{feed.name}</h3>

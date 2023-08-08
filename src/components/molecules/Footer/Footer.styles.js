@@ -6,6 +6,38 @@ export const FooterContainer = styled(motion.footer)`
   width: 100%;
   background: ${({ theme }) => theme.colors.bg};
 `;
+export const LinkFacebook = styled(motion.a)`
+  & i {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #1877f2;
+    }
+  }
+`;
+export const LinkWhatsapp = styled(motion.a)`
+  & i {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #128c7e;
+    }
+  }
+`;
+export const LinkTwitter = styled(motion.a)`
+  & i {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #1da1f2;
+    }
+  }
+`;
+export const LinkLinkedin = styled(motion.a)`
+  & i {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #004182;
+    }
+  }
+`;
 
 export const FooterBox = styled(motion.div)`
   display: flex;
@@ -76,6 +108,14 @@ export const Section = styled(motion.div)`
       font-weight: normal;
       font-stretch: normal;
     }
+    & a {
+      color: ${({ active, theme }) =>
+        active ? theme.colors.primary : theme.colors.text_100};
+      text-decoration: none !important;
+    }
+  }
+  & .service {
+    color: ${({ theme }) => theme.colors.text_100} !important;
   }
   @media ${devices.lg} {
     & h4 {

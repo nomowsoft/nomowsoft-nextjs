@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable @next/next/no-page-custom-font */
 import React from "react";
 import Head from "next/head";
@@ -7,8 +8,18 @@ import styled from "styled-components";
 import FloatingMenu from "../molecules/floatingMenu";
 
 const PageTemplate = (props) => {
-  const { children, title, data } = props;
-
+  const {
+    children,
+    title,
+    whatsapp,
+    facebook,
+    linkedin,
+    twitter,
+    whatsapps,
+    email,
+    services,
+    data,
+  } = props;
   return (
     <Container>
       <Head>
@@ -24,8 +35,16 @@ const PageTemplate = (props) => {
       </Head>
       <Header />
       <main>{children && children}</main>
-      <FloatingMenu data={data} />
-      <Footer data={data} />
+      <FloatingMenu data={data} link_whatsapp={whatsapp} />
+      <Footer
+        data={data}
+        facebook={facebook}
+        linkedin={linkedin}
+        twitter={twitter}
+        whatsapps={whatsapps}
+        email={email}
+        services={services}
+      />
     </Container>
   );
 };

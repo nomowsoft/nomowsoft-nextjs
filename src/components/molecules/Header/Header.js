@@ -19,7 +19,7 @@ import {
 const Header = () => {
   const { scrolled } = useScroll();
   const { pathname, push } = useRouter();
-  const i18n = useTranslation();
+  const t = useTranslation();
 
   return (
     <HeaderBox scrolled={scrolled}>
@@ -37,13 +37,13 @@ const Header = () => {
           <HeaderLink
             active={pathname === "/" || pathname === "/recommended_questions"}
           >
-            <Link href="/">{i18n.t("common:home")}</Link>
+            <Link href="/">{t.t("common:home")}</Link>
           </HeaderLink>
           <HeaderLink active={pathname === "/blogs"}>
-            <Link href="/blogs">{i18n.t("common:blog")}</Link>
+            <Link href="/blogs">{t.t("common:blog")}</Link>
           </HeaderLink>
           <HeaderBtn
-            title={i18n.t("common:start_demo")}
+            title={t.t("common:start_demo")}
             btnStyle="success"
             small
             onClick={() => push("/start_demo")}
