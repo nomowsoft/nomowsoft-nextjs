@@ -10,6 +10,7 @@ export const Container = styled.div`
       }
       .address {
         font-size: 24px;
+        color: ${({ theme }) => theme.colors.text_title};
       }
       .paragraph {
         font-size: 18px;
@@ -30,13 +31,13 @@ export const NavLinkActive = styled.div`
   }
   .active {
     background-color: #e66b26 !important;
-    border: 1px solid transparent;
+    /* border-bottom: 1px solid #e66b26; */
     border-color: #e66b26 !important;
     color: #fff !important;
   }
-  .active:focus {
+  /* .active:focus {
     border-color: #217371 !important;
-  }
+  } */
   button:focus {
     outline: #e66b26 5px;
   }

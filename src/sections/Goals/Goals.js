@@ -21,7 +21,11 @@ const Goals = () => {
           <div className="col-lg-5 col-12">
             <NavLinkActive data-aos="fade-up">
               <div>
-                <ul className="nav nav-tabs" id="myTab" role="tablist">
+                <ul
+                  className="nav justify-content-center"
+                  id="myTab"
+                  role="tablist"
+                >
                   <li className="nav-item px-1" role="presentation">
                     <button
                       className="nav-link active"
@@ -66,8 +70,8 @@ const Goals = () => {
                   <div className="col-md-4">
                     <Image
                       src="/assets/erp.png"
-                      width={3000}
-                      height={2000}
+                      width={300}
+                      height={200}
                       alt=""
                     />
                   </div>
@@ -91,8 +95,8 @@ const Goals = () => {
                   <div className="col-md-4">
                     <Image
                       src="/assets/busnes.png"
-                      width={2500}
-                      height={2000}
+                      width={250}
+                      height={200}
                       alt=""
                     />
                   </div>

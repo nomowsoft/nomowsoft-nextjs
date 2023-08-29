@@ -14,7 +14,7 @@
     "bootstrap": "^5.3.1",
     "framer-motion": "^4.1.17",
     "jeddy": "^1.0.176",
-    "next": "^11.1.4",
+    "next": "^13.4.19",
     "next-export-i18n": "^2.1.0",
     "next-translate": "^1.0.7",
     "prop-types": "^15.7.2",

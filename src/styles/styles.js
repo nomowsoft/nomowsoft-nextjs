@@ -29,6 +29,7 @@ const light = {
     text: "#000",
     text_50: "#373737",
     text_100: "#5b5757",
+    text_title: "#217371",
     shadow: "rgba(151, 151, 151, 0.16)",
     linear: "linear-gradient(to bottom, #fff -11%, #fcfaff)",
     linear_50:
@@ -44,6 +45,7 @@ const dark = {
     bg_100: "#364553",
     muted: "#262626",
     text: "#fff",
+    text_title: "#e66b27",
     text_50: "#fff",
     text_100: "#fff",
     shadow: "#2c3e50",

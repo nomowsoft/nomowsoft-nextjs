@@ -34,11 +34,7 @@ const Identity = ({ about_us }) => {
             <span style={{ color: "#e66b27" }}>{t.t("common:soft")}</span>
           </span>
         </IdentityTitle>
-        <Description data-aos="fade-up">
-          {about_us?.map((about) => (
-            <div key={about.id}>{about.content}</div>
-          ))}
-        </Description>
+        <Description data-aos="fade-up">{about_us[0].content}</Description>
       </InfoSection>
     </IdentityContainer>
   );
