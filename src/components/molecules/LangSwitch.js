@@ -2,7 +2,13 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { IconBox } from "./ColorModeSwitch";
 
-function LangSwitcher() {
+function LangSwitcher({ locale }) {
+  var Lang;
+  if (locale == "ar") {
+    Lang = "AR";
+  } else {
+    Lang = "EN";
+  }
   const router = useRouter();
   return (
     <IconBox small>
@@ -11,7 +17,7 @@ function LangSwitcher() {
         passHref
         locale={router.locale === "ar" ? "en" : "ar"}
       >
-        {router.locale.toUpperCase()}
+        {Lang}
       </Link>
     </IconBox>
   );
