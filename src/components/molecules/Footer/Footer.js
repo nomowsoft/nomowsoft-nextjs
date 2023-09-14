@@ -93,9 +93,17 @@ const Footer = ({
             <li>
               <div style={{ display: "flex", alignItems: "center" }}>
                 <Icon size={25} icon={mail} />
-                <span className="email">{email}</span>
+                <a
+                  href={`mailto:?to=${email}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="email"
+                >
+                  {email}
+                </a>
               </div>
             </li>
+            {/*  */}
           </Section>
         </FooterBox>
       </FooterContainer>
