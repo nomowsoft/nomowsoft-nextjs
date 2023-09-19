@@ -3,7 +3,7 @@ import PageTemplate from "components/Templates/PageTemplate";
 import { Introduction, Identity, Services, Clients, AboutUs } from "sections";
 import Goals from "sections/Goals";
 
-export const getStaticProps = async ({ locale }) => {
+export const getServerSideProps = async ({ locale }) => {
   var lang;
   if (locale == "ar") {
     lang = "ar_001";

@@ -3,16 +3,58 @@ import { devices } from "styles/styles";
 
 export const Container = styled.div`
   background: ${({ theme }) => theme.colors.linear};
-  height: 100vh;
+  min-height: calc(100vh - 91px);
   display: flex;
   align-items: center;
   justify-content: center;
+  & p {
+    justify-content: center;
+  }
+  & .card {
+    max-width: 285px !important;
+    max-height: 451px !important;
+    min-width: 285px !important;
+    min-height: 451px !important;
+    border: none !important;
+    border-radius: 20px !important;
+    background-color: ${({ theme }) => theme.colors.bg_100} !important;
+    color: ${({ theme }) => theme.colors.text_100} !important;
+    & .card .card-title {
+      color: ${({ theme }) => theme.colors.secondary} !important;
+    }
+    & p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  & .card .card-img-top {
+    padding: 5px;
+    border-radius: 20px;
+    heght: 20rem !important;
+  }
+  & .btn-primary {
+    background-color: ${({ theme }) => theme.colors.text_title} !important;
+    border-color: ${({ theme }) => theme.colors.text_title} !important;
+  }
+  & .container {
+    margin-top: 8rem;
+  }
+  & .container .row h2,
+  h5,
+  p {
+    color: ${({ theme }) => theme.colors.text_100} !important;
+    justify-content: center !important;
+  }
 `;
 
 export const ContentBox = styled.div`
   background: ${({ theme }) => theme.colors.bg_100};
   border-radius: 20px;
   padding: 20px;
+  margin-top: -7rem;
   @media ${devices.sm} {
     width: calc(100% - 50px);
   }

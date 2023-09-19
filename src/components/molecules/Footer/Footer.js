@@ -31,7 +31,6 @@ const Footer = ({
   email,
   services,
 }) => {
-  console.log(facebook);
   useEffect(() => {
     AOS.init({
       duration: 800,
